@@ -1,0 +1,62 @@
+:root {
+    --clr-background: #ffffff;
+    --clr-nav: #ffffff;
+    --clr-on-nav: #000000;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--clr-background);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: var(--clr-nav);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1vw, 3vw, 40px);
+}
+
+nav :nth-child(2) { order: 1; } 
+nav :nth-child(3) { order: 2; }
+nav :nth-child(4) { order: 4; }
+nav :nth-child(5) { order: 5; }
+
+nav > h1 {
+    order: 3;
+}
+
+nav > a {
+    text-decoration: none;
+    color: var(--clr-on-nav);
+}
+
+nav > a::after {
+    content: "";
+    display: block;
+    margin-left: -5px;
+    width: calc(100% + 10px);
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--clr-on-nav);
+    transform: scale(0,1);
+}
+
+nav > a:hover::after {
+    transform: scale(1,1);
+}
+
+nav > .active::after {
+    transform: scale(1,1);
+}
