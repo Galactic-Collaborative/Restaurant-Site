@@ -18,6 +18,7 @@ body {
 nav {
     position: absolute;
     top: 0;
+    height: 60px;
     width: 100%;
     background-color: var(--clr-nav);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -59,4 +60,31 @@ nav > a:hover::after {
 
 nav > .active::after {
     transform: scale(1,1);
+}
+
+nav > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav > div > .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-left: -10px;
+    background-color: var(--clr-nav);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 1;
+}
+
+nav > div > .dropdown > a {
+    text-decoration: none;
+    color: var(--clr-on-nav);
+    padding: 10px;
+}
+
+nav > div:hover .dropdown{
+    display: flex;
+    flex-direction: column;
 }
