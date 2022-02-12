@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    box-sizing: border-box;
+    font-family: "proxima-nova", serif;
+    margin: 0;
+    padding: 0;
+}
+
+video.backgroundVideo {
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100vmax;
+    height: 100vmin;
+    object-fit: cover;
+    filter: blur(5px) sepia(70%);
+
+    /* Hides the white border from blur */
+    transform: scale(1.1);
+    overflow: hidden;
+}
+body > main {
+    min-height: 100vmin;
+    position: relative;
+    overflow: hidden;
+}
+
+body > main > div.landingPage__clipBackground {
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    height: 100vmin;
+    width: 100vmax;
+    margin-left: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2vmax;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body > main header {
+    max-width: 36vmax; /* 50vmax - 2 * 2vmax (padding) */
+    text-align: left;
+    margin-right: 5vmax;
+}
+
+body > main header hgroup > h1 {
+    font-weight: 900;
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1;
+}
+
+body > main header hgroup > h2 {
+    margin-top: 0;
+}
+
+body > main header > hgroup {
+    margin-bottom: 0.5rem;
+}
