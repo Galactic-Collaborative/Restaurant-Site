@@ -5,14 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
-        <title>Restaurant</title>
-        <link rel="stylesheet" href="src/navbar.css" />
-    </head>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
 
+        <title>Restaurant</title>
+    </head>
     <body>
         <nav>
-            <h1>RESTAURANT</h1>
+            <h1>American Steakhouse</h1>
             <a href="index.html" class="active">Home</a>
             <a href="menu.html">Menu</a>
             <div>
@@ -27,7 +31,13 @@
             <a href="contact.html">Contact</a>
         </nav>
         <main class="landingPage">
-            <video class="backgroundVideo" muted autoplay loop>
+            <video
+                class="backgroundVideo"
+                aria-hidden="true"
+                muted
+                autoplay
+                loop
+            >
                 <!--source src="video/rollingStick.webm" type="video/webm" /-->
                 <source src="video/rollingStick.mp4" type="video/mp4" />
             </video>
@@ -35,16 +45,39 @@
                 <header>
                     <hgroup>
                         <h1>We love meat.</h1>
-                        <h2>And we hope you do too.</h2>
+                        <h2>And we hope you do too</h2>
                     </hgroup>
                     <p>
                         Here at American Steakhouse we strive to deliver the
-                        best meat experience one has ever experienced.
+                        best meat experience you have ever experienced.
                     </p>
                 </header>
+                <span class="material-icons"> arrow_downward </span>
+            </div>
+            <div class="landingPage__WelcomeMessageContainer">
+                <p>
+                    Founded in 1923, the American Steakhouse Company has
+                    deliverd top quality meat to your table for a century now.
+                    Whether you like a burger, steak or something green, we have
+                    got you covered.
+                    <a href="menu.html">See our menu for all our dishes</a>
+                </p>
+                <p>
+                    The American Steakhouse has a rich history. The story begins
+                    far before the establishment of American Steakhouse in 1923
+                    in Jackson, Wyoming. See how our restaurant evolved over the
+                    century and see us prepare for our grand 100 year
+                    anniversary.
+                    <a href="about.html"> Find out more about our history!</a>
+                </p>
             </div>
         </main>
-
-        <footer></footer>
+        <footer>
+            <p>
+                This site is a fictional description of a restaurant created for
+                a project for <a href="https://uu.nl">Utrecht University</a>. ©
+                Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+            </p>
+        </footer>
     </body>
 </html>
