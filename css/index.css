@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body,
 html {
     box-sizing: border-box;
@@ -10,13 +6,23 @@ html {
     padding: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p + p {
+    margin-top: 2rem;
+}
+
 video.backgroundVideo {
     top: 0;
     right: 0;
     position: absolute;
     z-index: -1;
-    width: 100vmax;
-    height: 100vmin;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     filter: blur(5px) sepia(70%);
 
@@ -25,15 +31,15 @@ video.backgroundVideo {
     overflow: hidden;
 }
 body > main {
-    min-height: 100vmin;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
 body > main > div.landingPage__clipBackground {
     clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
-    height: 100vmin;
-    width: 100vmax;
+    height: 100vh;
+    width: 100vw;
     margin-left: auto;
     background: rgba(0, 0, 0, 0.7);
     padding: 2vmax;
@@ -42,10 +48,11 @@ body > main > div.landingPage__clipBackground {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
 }
 
 body > main header {
-    max-width: 36vmax; /* 50vmax - 2 * 2vmax (padding) */
+    max-width: 36vw; /* 40vw - 2 * 2vw (padding) */
     text-align: left;
     margin-right: 5vmax;
 }
@@ -63,4 +70,65 @@ body > main header hgroup > h2 {
 
 body > main header > hgroup {
     margin-bottom: 0.5rem;
+}
+
+div.landingPage__WelcomeMessageContainer {
+    z-index: 1;
+    position: relative;
+    --margin: 4vmax;
+    --padding: 3vmax;
+    margin-top: calc(-1 * var(--margin));
+    padding: calc(var(--margin) + var(--padding)) 0 var(--padding);
+    width: 100vw;
+    clip-path: polygon(
+        0 0,
+        50% calc(var(--margin) - 1vmax),
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+    overflow: visible;
+    background-color: white;
+}
+
+div.landingPage__WelcomeMessageContainer > p {
+    /* center the paragraph */
+    margin-left: auto;
+    margin-right: auto;
+    width: min(700px, 80vw);
+}
+
+div.landingPage__clipBackground > span.material-icons {
+    z-index: 1;
+    position: absolute;
+    left: calc(50% - 16px);
+    bottom: 5%;
+    font-size: 2em;
+    color: white;
+    animation: float 3s infinite ease-in-out;
+}
+
+footer > p {
+    padding: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+}
+
+@keyframes float {
+    from {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    50% {
+        padding-bottom: 10px;
+        padding-top: 0;
+    }
+
+    to {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 }
