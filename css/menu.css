@@ -1,0 +1,21 @@
+table {
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+    top: 30px;
+    border-collapse: collapse;
+}
+
+td:nth-child(2) {
+    width: 10%;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+    padding: 7px;
+}
+
+td > h3 {
+    margin: 0;
+}
