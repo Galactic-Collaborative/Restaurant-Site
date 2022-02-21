@@ -8,7 +8,7 @@ body {
     background-color: var(--clr-background);
 }
 
-nav {
+body > header {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -25,30 +25,30 @@ nav {
     gap: clamp(1vw, 3vw, 40px);
 }
 
-nav :nth-child(2) {
+body > header :nth-child(2) {
     order: 1;
 }
-nav :nth-child(3) {
+body > header :nth-child(3) {
     order: 2;
 }
-nav :nth-child(4) {
+body > header :nth-child(4) {
     order: 4;
 }
-nav :nth-child(5) {
+body > header :nth-child(5) {
     order: 5;
 }
 
-nav > h1 {
+body > header > h1 {
     order: 3;
     text-transform: uppercase;
 }
 
-nav > a {
+body > header > a {
     text-decoration: none;
     color: var(--clr-on-nav);
 }
 
-nav > a::after {
+body > header > a::after {
     content: "";
     display: block;
     margin-left: -5px;
@@ -59,29 +59,27 @@ nav > a::after {
     transform: scale(0, 1);
 }
 
-nav > a:hover::after,
-nav > a:focus-visible::after {
+body > header > a:hover::after,
+body > header > a:focus-visible::after,
+body > header > .active::after {
     transform: scale(1, 1);
 }
 
-nav > .active::after {
-    transform: scale(1, 1);
-}
-
-nav > div {
+body > header > nav {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-nav > div > button {
+body > header > nav > button {
     background-color: transparent;
     border: none;
     outline: none;
     font: inherit;
+    color: var(--clr-on-nav);
 }
 
-nav > div > .dropdown {
+body > header > nav > .dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -91,24 +89,24 @@ nav > div > .dropdown {
     z-index: 1;
 }
 
-nav > div > .dropdown > a {
+body > header > nav > .dropdown > a {
     text-decoration: none;
     color: var(--clr-on-nav);
     padding: 10px;
     border: 2px solid transparent;
 }
 
-nav > div:hover .dropdown,
-div:focus-within > .dropdown {
+body > header > nav:hover .dropdown,
+body > header > nav:focus-within > .dropdown {
     display: flex;
     flex-direction: column;
 }
 
-nav > div > .dropdown > a:hover {
+body > header > nav > .dropdown > a:hover {
     opacity: 0.8;
 }
 
-nav > div > .dropdown > a:focus {
-    border: 2px solid black;
+body > header > nav > .dropdown > a:focus {
+    border: 2px solid var(--clr-on-nav);
     outline: none;
 }
