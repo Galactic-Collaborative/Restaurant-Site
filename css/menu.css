@@ -2,12 +2,13 @@ table {
     position: relative;
     width: 60%;
     margin-left: 20%;
-    top: 30px;
+    top: 100px;
     border-collapse: collapse;
+    background-color: white;
 }
 
 td:nth-child(2) {
-    width: 10%;
+    width: clamp(63px, 6vw, 100px);
     text-align: center;
 }
 
