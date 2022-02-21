@@ -79,6 +79,7 @@ nav > div > button {
     border: none;
     outline: none;
     font: inherit;
+    color: var(--clr-on-nav);
 }
 
 nav > div > .dropdown {
@@ -109,6 +110,6 @@ nav > div > .dropdown > a:hover {
 }
 
 nav > div > .dropdown > a:focus {
-    border: 2px solid black;
+    border: 2px solid var(--clr-on-nav);
     outline: none;
 }
