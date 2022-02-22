@@ -1,7 +1,9 @@
 :root {
-    --clr-background: #1a1a1a;
+    --clr-background: #ffffff;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
+
+    --nav-height: 75px;
 }
 
 body {
@@ -12,9 +14,8 @@ nav {
     position: fixed;
     z-index: 1;
     top: 0;
-    height: 75px;
+    height: var(--nav-height);
     width: 100%;
-    height: 75px;
     background-color: var(--clr-nav);
     color: var(--clr-on-nav);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -68,6 +69,9 @@ nav > .active::after {
     transform: scale(1, 1);
 }
 
+nav + main:not(.landingPage) {
+    margin-top: var(--nav-height);
+}
 nav > div {
     height: 100%;
     display: flex;
@@ -111,4 +115,21 @@ nav > div > .dropdown > a:hover {
 nav > div > .dropdown > a:focus {
     border: 2px solid black;
     outline: none;
+}
+
+main {
+    min-height: calc(100vh - 34px - var(--nav-height));
+}
+
+footer {
+    height: 34px;
+    background-color: #1a1a1a;
+}
+
+footer > p {
+    padding: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
 }
