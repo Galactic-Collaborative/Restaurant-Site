@@ -16,7 +16,7 @@ p + p {
     margin-top: 2rem;
 }
 
-video.backgroundVideo {
+video#backgroundVideo {
     top: 0;
     right: 0;
     position: absolute;
@@ -30,6 +30,14 @@ video.backgroundVideo {
     transform: scale(1.1);
     overflow: hidden;
 }
+
+/* Don't show the video to people who prefer reduced-motion */
+@media (prefers-reduced-motion) {
+    video#backgroundVideo {
+        display: none;
+    }
+}
+
 body > main {
     min-height: 100vh;
     position: relative;
@@ -57,18 +65,14 @@ body > main header {
     margin-right: 5vmax;
 }
 
-body > main header hgroup > h1 {
+body > main header h1 {
     font-weight: 900;
     font-size: 5rem;
     margin: 0;
     line-height: 1;
 }
 
-body > main header hgroup > h2 {
-    margin-top: 0;
-}
-
-body > main header > hgroup {
+body > main header h2 {
     margin-bottom: 0.5rem;
 }
 
@@ -106,14 +110,6 @@ div.landingPage__clipBackground > span.material-icons {
     font-size: 2em;
     color: white;
     animation: float 3s infinite ease-in-out;
-}
-
-footer > p {
-    padding: 0.5rem;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    font-size: 0.75rem;
 }
 
 @keyframes float {
