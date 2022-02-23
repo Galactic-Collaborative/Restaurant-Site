@@ -10,7 +10,7 @@ body > main > h2 {
     margin-bottom: 2px;
 }
 
-body > main > table {
+table.menuTable {
     position: relative;
     width: 60%;
     margin-left: 20%;
@@ -19,16 +19,16 @@ body > main > table {
     border-radius: 10px;
 }
 
-body > main > table > tbody > tr > td:nth-child(2) {
+table.menuTable tr > td:nth-child(2) {
     width: clamp(90px, 7vw, 150px);
     text-align: center;
 }
 
-body > main > table > tbody > tr > td {
+table.menuTable tr > td {
     border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
 
-body > main > table > tbody > tr > td > h3 {
+table.menuTable td > h3 {
     margin: 0;
 }
