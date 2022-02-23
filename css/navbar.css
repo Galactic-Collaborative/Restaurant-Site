@@ -113,3 +113,11 @@ nav > div > .dropdown > a:focus {
     border: 2px solid var(--clr-on-nav);
     outline: none;
 }
+
+footer > p {
+    padding: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+}
