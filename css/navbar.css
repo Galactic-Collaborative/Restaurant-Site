@@ -41,6 +41,8 @@ nav :nth-child(5) {
 nav > h1 {
     order: 3;
     text-transform: uppercase;
+    text-align: center;
+    /* width: 160px; */
 }
 
 nav > a {
@@ -112,4 +114,11 @@ nav > div > .dropdown > a:hover {
 nav > div > .dropdown > a:focus {
     border: 2px solid var(--clr-on-nav);
     outline: none;
+}
+
+@media screen and (max-width: 630px) {
+    nav > h1 {
+        width: 160px;
+        line-height: 23px;
+    }
 }
