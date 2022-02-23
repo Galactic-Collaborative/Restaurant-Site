@@ -19,6 +19,14 @@ table.menuTable {
     border-radius: 10px;
 }
 
+table.menuTable > caption {
+    color: var(--clr-on-nav);
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: x-large;
+}
+
 table.menuTable tr > td:nth-child(2) {
     width: clamp(90px, 7vw, 150px);
     text-align: center;
