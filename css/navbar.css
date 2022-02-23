@@ -6,8 +6,23 @@
     --nav-height: 75px;
 }
 
+body,
+html {
+    box-sizing: border-box;
+    font-family: "proxima-nova", "Roboto", sans-serif, serif;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--clr-background);
+    margin: 0;
 }
 
 nav {
@@ -118,7 +133,12 @@ nav > div > .dropdown > a:focus {
     outline: none;
 }
 
-main {
+main:not(.landingPage) {
+    box-sizing: border-box;
+    width: min(1000px, 100vw);
+    margin: 0 auto;
+    position: relative;
+    padding: 1vw 0;
     min-height: calc(100vh - 34px - var(--nav-height));
 }
 
