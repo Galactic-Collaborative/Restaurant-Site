@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: transparent;
 }
 
 main {
@@ -21,6 +22,7 @@ div.plotpoint {
 }
 
 div.plotpoint > p {
+    z-index: 1;
     font-size: 1.2em;
 
     width: clamp(300px, 20vw, 500px);

@@ -134,15 +134,6 @@ nav > div > .dropdown > a:focus {
     outline: none;
 }
 
-main:not(.landingPage) {
-    box-sizing: border-box;
-    width: min(1000px, 100vw);
-    margin: 0 auto;
-    position: relative;
-    padding: 1vw 0;
-    min-height: calc(100vh - 34px - var(--nav-height));
-}
-
 footer {
     height: 34px;
     background-color: #1a1a1a;
