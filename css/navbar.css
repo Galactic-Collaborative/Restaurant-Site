@@ -7,8 +7,19 @@
     --nav-height: 75px;
 }
 
-body {
+body,
+html {
+    box-sizing: border-box;
+    font-family: "proxima-nova", serif;
+    margin: 0;
+    padding: 0;
     background-color: var(--clr-background);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 nav {
