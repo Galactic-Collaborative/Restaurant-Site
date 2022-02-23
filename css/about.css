@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+
+main {
+    box-sizing: border-box;
+    width: min(1000px, 100vw);
+    margin: 0 auto;
+    position: relative;
+    padding: 1vw 0;
+}
+
+div.plotpoint:first-child {
+    margin-top: 1vw;
+}
+
+div.plotpoint {
+    position: relative;
+    width: fit-content;
+    min-height: calc(clamp(100px, 15vw, 300px) + 20px);
+}
+
+div.plotpoint > p {
+    font-size: 1.2em;
+
+    width: clamp(300px, 20vw, 500px);
+    padding: 1.5vw;
+    background-color: rgb(207, 207, 207);
+    border-radius: 4px;
+    margin: 1vw 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+div.plotpoint > picture > img {
+    z-index: -1;
+    top: 20px;
+    position: absolute;
+    width: clamp(100px, 15vw, 300px);
+    height: clamp(100px, 15vw, 300px);
+    border-radius: 4px;
+}
+
+main > div:not(.plotpoint--important):nth-child(2n + 1) {
+    margin-right: auto;
+}
+
+main > div:not(.plotpoint--important):nth-child(2n + 1) > picture > img {
+    right: calc(-0.85 * clamp(100px, 15vw, 300px));
+}
+
+main > div:not(.plotpoint--important):nth-child(2n) {
+    margin-left: auto;
+}
+
+main > div:not(.plotpoint--important):nth-child(2n) > picture > img {
+    left: calc(-0.65 * clamp(100px, 15vw, 300px));
+}
+
+div.plotpoint--important > picture {
+    margin: 0;
+}
+
+div.plotpoint--important > picture > img {
+    position: relative;
+    margin-top: calc(-2vw - 20px);
+    width: calc(min(1000px, 100vw) - 4vw);
+    height: clamp(300px, 25vw, 700px);
+    margin-left: 2vw;
+    object-fit: cover;
+}
+
+div.plotpoint--important > p {
+    box-sizing: border-box;
+    width: min(1000px, 100vw);
+}
+
+div.plotpoint--important > picture + p {
+    margin-top: -1vw;
+}
+
+div.plotpoint--no-picture {
+    min-height: unset;
+}
