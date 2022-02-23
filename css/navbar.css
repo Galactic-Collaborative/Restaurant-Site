@@ -135,8 +135,13 @@ nav > div > .dropdown > a:focus {
 }
 
 footer {
-    height: 34px;
+    --footer-height: 34px;
+    height: var(--footer-height);
     background-color: #1a1a1a;
+}
+
+main {
+    min-height: calc(100vh - var(--nav-height) - 34px);
 }
 
 footer > p {
