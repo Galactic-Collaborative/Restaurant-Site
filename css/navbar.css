@@ -1,13 +1,25 @@
 :root {
     --clr-background: #ffffff;
+    --clr-background-menu: #1a1a1a;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
 
     --nav-height: 75px;
 }
 
-body {
+body,
+html {
+    box-sizing: border-box;
+    font-family: "proxima-nova", serif;
+    margin: 0;
+    padding: 0;
     background-color: var(--clr-background);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 nav {
@@ -128,7 +140,6 @@ footer > p {
     color: white;
     font-size: 0.75rem;
 }
-
 
 @media screen and (max-width: 630px) {
     nav > h1 {
