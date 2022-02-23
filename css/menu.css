@@ -14,7 +14,8 @@ html {
 
 body > main {
     position: relative;
-    margin-top: 100px;
+    padding-top: 1px;
+    background-color: var(--clr-background-menu);
 }
 
 body > main > h2 {
@@ -38,7 +39,7 @@ body > main > table > tbody > tr > td:nth-child(2) {
 }
 
 body > main > table > tbody > tr > td {
-    border: 1px solid var(--clr-background);
+    border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
 
