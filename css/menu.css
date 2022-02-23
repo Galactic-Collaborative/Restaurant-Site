@@ -1,21 +1,42 @@
-table {
+body > main {
+    position: relative;
+    padding-top: 1px;
+    background-color: var(--clr-background-menu);
+}
+
+body > main > h2 {
+    color: var(--clr-on-nav);
+    margin-left: 20%;
+    margin-bottom: 2px;
+}
+
+table.menuTable {
     position: relative;
     width: 60%;
     margin-left: 20%;
-    top: 30px;
     border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
 }
 
-td:nth-child(2) {
-    width: 10%;
+table.menuTable > caption {
+    color: var(--clr-on-nav);
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+table.menuTable tr > td:nth-child(2) {
+    width: clamp(90px, 7vw, 150px);
     text-align: center;
 }
 
-td {
-    border: 1px solid black;
+table.menuTable tr > td {
+    border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
 
-td > h3 {
+table.menuTable td > h3 {
     margin: 0;
 }

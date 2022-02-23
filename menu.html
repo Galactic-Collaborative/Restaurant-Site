@@ -4,57 +4,124 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
         <title>Restaurant</title>
-        <link rel="stylesheet" href="src/navbar.css">
-        <link rel="stylesheet" href="src/menu.css">
     </head>
 
     <body>
         <nav>
-            <h1>RESTAURANT</h1>
+            <h1>American Steakhouse</h1>
             <a href="index.html">Home</a>
             <a href="menu.html" class="active">Menu</a>
-            <a href="about.html">About</a>
+            <div>
+                <button>About</button>
+                <div class="dropdown">
+                    <a href="#">Kitchen</a>
+                    <a href="#">Chefs</a>
+                    <a href="#">Wijngozers</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
 
-        <table>
-            <tr>
-                <td><h3>Menu item 1</h3>test</td>
-                <td>&euro; 0.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 2</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 3</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 4</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 5</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 6</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 7</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-            <tr>
-                <td><h3>Menu item 8</h3>test</td>
-                <td>&euro; 2.99</td>
-            </tr>
-        </table>
-
+        <main>
+            <table class="menuTable">
+                <caption>Steaks</caption>
+                <tbody>
+                    <tr>
+                        <td><h3>Rib eye</h3>Beatiful rib eye soaked in a barbecue inspired marinade.</td>
+                        <td>&euro; 24.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Garlic-butter steak</h3>A delicious steak cooked to your liking from the top sirloin.</td>
+                        <td>&euro; 22.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>New York strip steak</h3>Tender piece of meat from the top part of the short loin, cooked New York style.</td>
+                        <td>&euro; 27.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Filet mignon</h3>Delicious piece of meat from the tip of the tenderloin.</td>
+                        <td>&euro; 29.-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="menuTable">
+                <caption>Ribs</caption>
+                <tbody>
+                    <tr>
+                        <td><h3>Black angus burger</h3>Burger from 100% black angus beef with tomatoes, lettuce, red unions and our special sauce on a crispy bun.</td>
+                        <td>&euro; 18.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Cheese burger</h3>Delicious burger with a tomatoes, red unios, lettuce, pickles, mayo and mustard and of course cheddar cheese.</td>
+                        <td>Single: &euro; 16.- <br>Double: &euro; 20.-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="menuTable">
+                <caption>Burgers</caption>
+                <tbody>
+                    <tr>
+                        <td><h3>Spareribs</h3>Spareribs cooked to perfection so the meat will just fall of the bone. Avaliable with the following marinades: smokey bbq, garlic, spicy and sweet and sour.</td>
+                        <td>2 half ribs: &euro; 18.-<br>3 half ribs: &euro; 24.-<br>4 half ribs: &euro; 30.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Short Rib</h3>Slow cooked short ribs that result in the most tender and tasteful of al ribs.</td>
+                        <td>&euro; 26.-</td>
+                    </tr>
+                </tbody>
+            </table>  
+            <table class="menuTable">
+                <caption>Seafood</caption>  
+                <tbody>
+                    <tr>
+                        <td><h3>BBQ Shrimp</h3>Delicious shrimp seasoned with lemon juice, butter and garlic.</td>
+                        <td>&euro; 24.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Fish and chips</h3>Our take on the traditional fish and chips .</td>
+                        <td>&euro; 22.-</td>
+                    </tr>
+                </tbody>
+            </table>    
+            <table class="menuTable">
+                <caption>Sidedishes</caption> 
+                <tbody>
+                    <tr>
+                        <td><h3>French Fries</h3>Homemade French fries</td>
+                        <td>&euro; 6.-</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Green Bean Bundles</h3>Grean beans wrapped with bacon</td>
+                        <td>&euro; 6.-</td>
+                    <tr>
+                    </tr>
+                        <td><h3>Salad</h3>A coleslaw salad</td>
+                        <td>&euro; 6.-</td>
+                    <tr>
+                    </tr>
+                        <td><h3>Corn</h3>Corn on the cob</td>
+                        <td>&euro; 6.-</td>
+                    </tr>
+                </tbody>
+            </table>      
+        </main>
+        
         <footer>
-
+            <p>
+                This site is a fictional description of a restaurant created for
+                a project for <a href="https://uu.nl">Utrecht University</a>. ©
+                Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+            </p>
         </footer>
     </body>
 </html>

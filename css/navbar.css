@@ -1,5 +1,6 @@
 :root {
     --clr-background: #ffffff;
+    --clr-background-menu: #1a1a1a;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
 
@@ -12,6 +13,7 @@ html {
     font-family: "proxima-nova", "Roboto", sans-serif, serif;
     margin: 0;
     padding: 0;
+    background-color: var(--clr-background);
 }
 
 *,
@@ -20,9 +22,10 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--clr-background);
-    margin: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 nav {
