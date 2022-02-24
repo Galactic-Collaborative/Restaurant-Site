@@ -16,6 +16,43 @@ article.introduction > h1 {
     margin: 0 0 0.5em 0;
 }
 
+article.introduction > p {
+    margin-bottom: 0;
+}
+
+article.contactLocation > div {
+    display: inline-block;
+}
+
+article.contactLocation > div > h3 {
+    margin: 0 0 0.2em 0;
+}
+
+article.contactLocation > div > p {
+    margin: 0;
+}
+
+article.contactLocation > picture > img {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin-left: max(17px, 5%);
+}
+
+table.contactOpeningHours {
+    border-collapse: collapse;
+    margin: 5vh 0;
+}
+
+table.contactOpeningHours tr > td {
+    border: 1px solid var(--clr-background-menu);
+    padding: 7px;
+}
+
+table.contactOpeningHours :nth-child(1) {
+    width: 150px;
+}
+
 /* Beverage Grid */
 section.beverageGrid {
     --grid-item-width: min(300px, 30vw);
@@ -59,4 +96,27 @@ section.beverageGrid > article a {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1234px) {
+    main {
+        width: min(700px, 50vw);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    main {
+        width: 50vw;
+        text-align: center;
+    }
+
+    table.contactOpeningHours {
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    article.contactLocation > picture > img {
+        display: block;
+        margin: 30px auto;
+    }
 }

@@ -22,12 +22,6 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 nav > ul {
     position: fixed;
     z-index: 1;
@@ -48,6 +42,7 @@ nav > ul {
 nav > ul :nth-child(2) {
     order: 1;
 }
+
 nav > ul :nth-child(3) {
     order: 2;
 }
