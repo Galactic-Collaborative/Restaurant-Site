@@ -63,7 +63,8 @@ nav > ul :nth-child(5) {
     order: 5;
 }
 
-nav > ul h1 {
+nav > ul h1,
+nav > ul h2 {
     text-transform: uppercase;
     text-align: center;
 }
