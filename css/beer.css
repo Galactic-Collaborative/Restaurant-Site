@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+
+main {
+    width: min(1000px, 100vw);
+    margin: 0 auto;
+}
+
+article.beerPageIntroduction {
+    padding: 5vh 0;
+}
+
+article.beerPageIntroduction > h1 {
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+}
+
+/* Beverage Grid */
+section.beverageGrid {
+    --grid-item-width: min(300px, 30vw);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--grid-item-width));
+    gap: min(50px, 5vw);
+}
+
+section.beverageGrid > article {
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+    --grid-item-padding: 1vh;
+    width: var(--grid-item-width);
+    padding: var(--grid-item-padding);
+}
+
+section.beverageGrid > article img {
+    border-radius: 4px;
+    width: calc(var(--grid-item-width) - 2 * var(--grid-item-padding));
+    height: calc(var(--grid-item-width) * 0.9);
+    object-fit: cover;
+}
+
+section.beverageGrid > article > h3 {
+    font-size: 1.5rem;
+    margin: 0.75rem 0 0.5rem;
+}
+
+section.beverageGrid > article > p {
+    margin: 0 0 0.75rem 0;
+}
+
+section.beverageGrid > article a {
+    display: inline-block;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
