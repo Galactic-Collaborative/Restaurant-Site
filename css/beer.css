@@ -7,11 +7,11 @@ main {
     margin: 0 auto;
 }
 
-article.beerPageIntroduction {
+article.introduction {
     padding: 5vh 0;
 }
 
-article.beerPageIntroduction > h1 {
+article.introduction > h1 {
     font-size: 3em;
     margin: 0 0 0.5em 0;
 }

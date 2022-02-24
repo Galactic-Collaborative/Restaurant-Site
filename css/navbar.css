@@ -28,9 +28,10 @@ html {
     box-sizing: border-box;
 }
 
-nav {
+nav > ul {
     position: fixed;
     z-index: 1;
+    margin: 0;
     top: 0;
     height: var(--nav-height);
     width: 100%;
@@ -44,31 +45,41 @@ nav {
     gap: clamp(1vw, 3vw, 40px);
 }
 
-nav :nth-child(2) {
+nav > ul :nth-child(2) {
     order: 1;
 }
-nav :nth-child(3) {
+nav > ul :nth-child(3) {
     order: 2;
 }
-nav :nth-child(4) {
+
+nav > ul :first-child {
+    order: 3;
+}
+
+nav > ul :nth-child(4) {
     order: 4;
 }
-nav :nth-child(5) {
+nav > ul :nth-child(5) {
     order: 5;
 }
 
-nav > h1 {
-    order: 3;
+nav > ul h1 {
     text-transform: uppercase;
     text-align: center;
 }
 
-nav > a {
+ul:not(.context) li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
     text-decoration: none;
     color: var(--clr-on-nav);
 }
 
-nav > a::after {
+nav a::after {
     content: "";
     display: block;
     margin-left: -5px;
@@ -79,48 +90,54 @@ nav > a::after {
     transform: scale(0, 1);
 }
 
-nav > a:hover::after,
-nav > a:focus-visible::after,
-nav > .active::after {
+nav a:hover::after,
+nav a:focus-visible::after,
+nav .active::after {
     transform: scale(1, 1);
 }
 
 nav + main:not(.landingPage) {
     margin-top: var(--nav-height);
 }
-nav > div {
-    height: 100%;
-    display: flex;
-    align-items: center;
+
+nav ul > li {
+    list-style: none;
 }
 
-nav > div > button {
+/* nav > div > button {
     background-color: transparent;
     border: none;
     outline: none;
     font: inherit;
     color: var(--clr-on-nav);
-}
+} */
 
-nav > div > .dropdown {
+ul.context {
+    --text-padding: 1rem;
+
     display: none;
     position: absolute;
+    padding: 0;
     top: 100%;
-    margin-left: -10px;
+    margin-left: calc(-1 * var(--text-padding));
     background-color: var(--clr-nav);
     box-shadow: 0 2.1px 3px rgba(0, 0, 0, 0.12), 0 2.1px 2px rgba(0, 0, 0, 0.24);
     z-index: 1;
 }
 
-nav > div > .dropdown > a {
+ul.context a {
+    padding: var(--text-padding);
+}
+
+/* ul.dropdown > a {
     text-decoration: none;
     color: var(--clr-on-nav);
     padding: 10px;
     border: 2px solid transparent;
-}
+} */
 
-nav > div:hover .dropdown,
-div:focus-within > .dropdown {
+li.dropdown:hover ul.context,
+li.dropdown:focus-within ul.context {
     display: flex;
     flex-direction: column;
 }
@@ -153,7 +170,8 @@ footer > p {
 }
 
 @media screen and (max-width: 630px) {
-    nav > h1 {
+    nav h1,
+    nav h2 {
         width: 160px;
         line-height: 23px;
     }
