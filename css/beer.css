@@ -41,9 +41,18 @@ article.contactLocation > picture > img {
     margin-left: max(17px, 5%);
 }
 
+main > h3 {
+    margin: 5vh 0 0.2em 0;
+}
+
 table.contactOpeningHours {
+    position: relative;
     border-collapse: collapse;
-    margin: 5vh 0;
+}
+
+table.contactOpeningHours > caption {
+    text-align: left;
+    font-weight: bold;
 }
 
 table.contactOpeningHours tr > td {
@@ -51,8 +60,8 @@ table.contactOpeningHours tr > td {
     padding: 7px;
 }
 
-table.contactOpeningHours :nth-child(1) {
-    width: 150px;
+table.contactOpeningHours td:nth-child(1) {
+    width: max(140px, 10vw);
 }
 
 /* Beverage Grid */
@@ -114,7 +123,11 @@ section.beverageGrid > article a {
 
     table.contactOpeningHours {
         text-align: left;
-        margin: 0 auto;
+        margin: 0 auto 5vh auto;
+    }
+
+    table.contactOpeningHours > caption {
+        text-align: center;
     }
 
     article.contactLocation > picture > img {
