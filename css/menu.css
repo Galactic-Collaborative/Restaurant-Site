@@ -40,3 +40,29 @@ table.menuTable tr > td {
 table.menuTable td > h3 {
     margin: 0;
 }
+
+img.food_picture{
+    clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+
+div.menu_introduction{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+div.menu_introduction > p{
+    color: white;
+}
+
+div.menu_introduction > h1{
+    color: white;
+}
