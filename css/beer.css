@@ -1,6 +1,5 @@
 main {
     width: min(1000px, 100vw);
-    margin: 0 auto;
 }
 
 .introduction {

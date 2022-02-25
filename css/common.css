@@ -164,7 +164,6 @@ article.introduction > p {
 .primaryNavigation__link--subLink {
     padding: var(--text-padding);
     border: 2px solid transparent;
-    width: 100%;
 }
 
 .primaryNavigation__link--subLink:hover {
@@ -174,6 +173,7 @@ article.introduction > p {
 .primaryNavigation__link--subLink:focus {
     border: 2px solid var(--clr-on-nav);
     outline: none;
+    width: 100%;
 }
 
 .primaryNavigation__item--dropdown:hover .primaryNavigation__subList,
