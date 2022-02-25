@@ -4,7 +4,75 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/navbar.css" />
+        <link rel="stylesheet" href="/css/beer.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
         <title>Beer</title>
     </head>
-    <body></body>
+    <body>
+        <nav>
+            <h1>American Steakhouse</h1>
+            <a href="/">Home</a>
+            <a href="/menu.html">Menu</a>
+            <div>
+                <button onclick="location.href='/about/index.html'">
+                    About
+                </button>
+                <div class="dropdown">
+                    <a href="#">Kitchen</a>
+                    <a href="#">Chefs</a>
+                    <a href="/about/beer.html" class="active">Biergozers</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
+            <a href="/contact.html">Contact</a>
+        </nav>
+
+        <main>
+            <article class="beerPageIntroduction">
+                <h1>Alcoholic beverages</h1>
+                <p>
+                    With your delicious meal you of course want the drink to be
+                    as delicious as the food. Because of this we have selected a
+                    range of beverages just for you! Whether you're a wine or a
+                    beer person, we have a beverage for you! Josiah has
+                    personally selected a range of craft beers for local
+                    breweries or you can enjoy the ice cold house beer. If wine
+                    is more your kind of drink, we also have an amazing
+                    selection of wines from vineyards we have selected with the
+                    upmost care.
+                </p>
+                <p>
+                    If you have any questions about the beers or the wine you
+                    can just ask our beer expert and sommelier when you come for
+                    diner!
+                </p>
+            </article>
+            <section class="beverageGrid">
+                <article>
+                    <picture>
+                        <img src="/img/darkNight.jpg" alt="dark night" />
+                    </picture>
+                    <h3>Beer 1</h3>
+                    <p>This beer has a very rich flavour</p>
+                </article>
+                <article>
+                    <picture>
+                        <img src="/img/darkNight.jpg" alt="dark night" />
+                    </picture>
+                    <h3>Beer 1</h3>
+                    <p>This beer has a very rich flavour</p>
+                    <a>Find out more</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                This site is a fictional description of a restaurant created for
+                a project for <a href="https://uu.nl/en">Utrecht University</a>.
+                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+            </p>
+        </footer>
+    </body>
 </html>

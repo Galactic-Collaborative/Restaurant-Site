@@ -5,21 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Restaurant</title>
-        <link rel="stylesheet" href="css/navbar.css" />
-        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="/css/navbar.css" />
+        <link rel="stylesheet" href="/css/about.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
     </head>
 
     <body>
         <nav>
-            <h1>RESTAURANT</h1>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html" class="active">About</a>
-            <a href="contact.html">Contact</a>
+            <h1>American Steakhouse</h1>
+            <a href="/">Home</a>
+            <a href="/menu.html">Menu</a>
+            <div>
+                <button onclick="location.href='/about/index.html'">
+                    About
+                </button>
+                <div class="dropdown">
+                    <a href="#">Kitchen</a>
+                    <a href="#">Chefs</a>
+                    <a href="/about/beer.html" class="active">Biergozers</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
+            <a href="/contact.html">Contact</a>
         </nav>
 
         <main>
-            <div class="plotpoint">
+            <article class="plotpoint">
                 <p>
                     When Josiah was a young kid, he would go out with his father
                     to explore the nearby Yellowstone park. This started his
@@ -29,12 +40,12 @@
                 </p>
                 <picture>
                     <img
-                        src="img/yellowstone1.jpg"
+                        src="/img/yellowstone1.jpg"
                         alt="Yellowstone National Park"
                     />
                 </picture>
-            </div>
-            <div class="plotpoint plotpoint--important">
+            </article>
+            <article class="plotpoint plotpoint--important">
                 <p>
                     One day, when he was walking with a group of friends, he got
                     lost and could not find his way back on one of the main
@@ -44,7 +55,7 @@
                 </p>
                 <picture>
                     <img
-                        src="img/darkNight.jpg"
+                        src="/img/darkNight.jpg"
                         alt="Yellowstone National Park"
                     />
                 </picture>
@@ -55,19 +66,19 @@
                     his knife to kill for food. It was this moment, Josiah
                     realized the beef he hunted was actually really tasty!
                 </p>
-            </div>
-            <div class="plotpoint plotpoint--no-picture">
+            </article>
+            <article class="plotpoint plotpoint--no-picture">
                 <p>yeah I need to write some more for this right now.</p>
-            </div>
-            <div class="plotpoint">
+            </article>
+            <article class="plotpoint">
                 <p>Another thing</p>
                 <picture>
                     <img
-                        src="img/yellowstone1.jpg"
+                        src="/img/yellowstone1.jpg"
                         alt="Yellowstone National Park"
                     />
                 </picture>
-            </div>
+            </article>
         </main>
 
         <footer>
