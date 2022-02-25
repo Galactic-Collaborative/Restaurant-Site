@@ -4,173 +4,104 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="The history of the American Steakhouse Company"
-        />
         <title>Restaurant</title>
-        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/navbar.css" />
         <link rel="stylesheet" href="/css/about.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
     </head>
 
     <body>
-        <nav aria-label="Primary Navigation">
+        <nav>
             <!-- We use an unordered list for screenreaders-->
-            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
-            <ul class="primaryNavigation">
-                <li
-                    class="primaryNavigation__item primaryNavigation__brandName"
-                >
-                    <h1>American Steakhouse</h1>
-                </li>
-                <li class="primaryNavigation__item">
-                    <a
-                        href="/"
-                        class="primaryNavigation__link primaryNavigation__link--active"
-                    >
-                        Home
-                    </a>
-                </li>
-                <li class="primaryNavigation__item">
-                    <a href="/menu.html" class="primaryNavigation__link">
-                        Menu
-                    </a>
-                </li>
-                <li
-                    class="primaryNavigation__item--dropdown primaryNavigation__item"
-                >
-                    <a
-                        href="#"
-                        class="primaryNavigation__link"
-                        aria-haspopup="true"
-                    >
-                        About
-                    </a>
-                    <ul class="primaryNavigation__subList">
-                        <li
-                            class="primaryNavigation__item primaryNavigation__item--subItem"
-                        >
-                            <a
-                                href="/about/index.html"
-                                class="primaryNavigation__link primaryNavigation__link--subLink"
-                                >History</a
-                            >
-                        </li>
-                        <li
-                            class="primaryNavigation__item primaryNavigation__item--subItem"
-                        >
-                            <a
-                                href="/about/beer.html"
-                                class="primaryNavigation__link primaryNavigation__link--subLink"
-                            >
-                                Beverages
-                            </a>
-                        </li>
+            <ul>
+                <li><h1>American Steakhouse</h1></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul class="context">
+                        <li><a href="/about/index.html" class="active">History</a></li>
+                        <li><a href="/about/beer.html">Beverages</a></li>
                     </ul>
                 </li>
-                <li class="primaryNavigation__item">
-                    <a href="/contact.html" class="primaryNavigation__link">
-                        Contact
-                    </a>
-                </li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
 
         <main>
-            <article class="introduction">
-                <h2>History</h2>
+            <article class="plotpoint">
                 <p>
-                    The American Steakhouse company has existed for nearly a
-                    century. During these years, we have experienced quite a lot
-                    of things. Please join us as we navigate through our
-                    history, starting with Josiah Goodmen's founding of the
-                    American Steakhouse.
+                    When Josiah was a young kid, he would go out with his father
+                    to explore the nearby Yellowstone park. This started his
+                    passion for the park. When his father was asked to join the
+                    army and was deployed to fight in the great war, he often
+                    spend time in the park alone.
+                </p>
+                <picture>
+                    <img
+                        src="/img/yellowstone1.jpg"
+                        alt="Yellowstone National Park"
+                    />
+                </picture>
+            </article>
+            <article class="plotpoint plotpoint--important">
+                <p>
+                    One day, when he was walking with a group of friends, he got
+                    lost and could not find his way back on one of the main
+                    paths. Josiah fought for his live in the wilderness, using
+                    his knife to kill for food. It was this moment, Josiah
+                    realized the meat he hunted was actually really tasty!
+                </p>
+                <picture>
+                    <img
+                        src="/img/darkNight.jpg"
+                        alt="Yellowstone National Park"
+                    />
+                </picture>
+                <p>
+                    After a couple of days, Josiah saw the interstate from a
+                    mountain top nearby and walked towards it. A stranger
+                    generously lifted him back to his home in Jackson where
+                    Josiah immediately started working on a business.
                 </p>
             </article>
-            <section class="history">
-                <article class="plotpoint">
-                    <p>
-                        When Josiah was a young kid, he would go out with his
-                        father to explore the nearby Yellowstone park. This
-                        started his passion for the park. When his father was
-                        asked to join the army and was deployed to fight in the
-                        great war, he often spend time in the park alone.
-                    </p>
-                    <picture class="plotpoint__picture">
-                        <img
-                            class="plotpoint__image"
-                            src="/img/yellowstone1.jpg"
-                            alt="Yellowstone National Park"
-                        />
-                    </picture>
-                </article>
-                <article class="plotpoint plotpoint--important">
-                    <p>
-                        One day, when he was walking with a group of friends, he
-                        got lost and could not find his way back on one of the
-                        main paths. Josiah fought for his live in the
-                        wilderness, using his knife to kill for food. It was
-                        this moment, Josiah realized the meat he hunted was
-                        actually really tasty!
-                    </p>
-                    <picture class="plotpoint__picture">
-                        <img
-                            class="plotpoint__image"
-                            src="/img/darkNight.jpg"
-                            alt="Yellowstone National Park"
-                        />
-                    </picture>
-                    <p>
-                        After a couple of days, Josiah saw the interstate from a
-                        mountain top nearby and walked towards it. A stranger
-                        generously lifted him back to his home in Jackson where
-                        Josiah immediately started working on a business.
-                    </p>
-                </article>
-                <article class="plotpoint plotpoint--no-picture">
-                    <p>
-                        It started from his grandma's basement, which is a huge
-                        downgrade compared to
-                        <a href="#restaurantBuilt" class="plotpoint__link">
-                            Josiah's current restaurant
-                        </a>
-                        Josiah was allowed to use the kitchen, which he used to
-                        full potential. On the opening day, before going to the
-                        market to buy fresh meat, he submitted an ad in a local
-                        newspaper. Because of the Roaring Twenties, the
-                        advertisement was no mistake: the basement was full in
-                        no time. This encouraged Josiah to expand his business.
-                    </p>
-                </article>
-                <article class="plotpoint">
-                    <p>
-                        He started his search for the ideal place. Josiah knew
-                        it had to be somewhere, where it felt home. As Josiah
-                        was a bit of an adventurer, he chose a place near the
-                        Yellowstone National Park. Josiah did fear that being
-                        too far out of town could interfere with his business,
-                        but he was proven wrong three weeks later, when the
-                        establishment we are still using today, was built.
-                    </p>
-                    <picture class="plotpoint__picture">
-                        <img
-                            class="plotpoint__image"
-                            src="/img/yellowstone1.jpg"
-                            alt="Yellowstone National Park"
-                        />
-                    </picture>
-                </article>
-            </section>
+            <article class="plotpoint plotpoint--no-picture">
+                <p>
+                    It started from his grandma's basement, which is a huge
+                    downgrade compared to
+                    <a href="#restaurantBuilt"> Josiah's current restaurant</a>
+                    Josiah was allowed to use the kitchen, which he used to full
+                    potential. On the opening day, before going to the market to
+                    buy fresh meat, he submitted an ad in a local newspaper.
+                    Because of the Roaring Twenties, the advertisement was no
+                    mistake: the basement was full in no time. This encouraged
+                    Josiah to expand his business.
+                </p>
+            </article>
+            <article class="plotpoint">
+                <p>
+                    He started his search for the ideal place. Josiah knew it
+                    had to be somewhere, where it felt home. As Josiah was a bit
+                    of an adventurer, he chose a place near the Yellowstone
+                    National Park. Josiah did fear that being too far out of
+                    town could interfere with his business, but he was proven
+                    wrong three weeks later, when the <a href="../contact.html">establishment</a> we are still
+                    using today, was built.
+                </p>
+                <picture>
+                    <img
+                        src="/img/yellowstone1.jpg"
+                        alt="Yellowstone National Park"
+                    />
+                </picture>
+            </article>
         </main>
 
-        <footer class="footer">
+        <footer>
             <p>
                 This site is a fictional description of a restaurant created for
-                a project for
-                <a href="https://uu.nl/en" class="footer_link">
-                    Utrecht University</a
-                >. © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+                a project for <a href="https://uu.nl/en">Utrecht University</a>.
+                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
             </p>
         </footer>
     </body>
