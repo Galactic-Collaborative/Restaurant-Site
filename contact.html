@@ -5,97 +5,159 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Restaurant</title>
-        <link rel="stylesheet" href="css/navbar.css" />
-        <link rel="stylesheet" href="css/beer.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/contact.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
+        <meta
+            name="description"
+            content="The contact information of the American Steakhouse Company"
+        />
     </head>
 
     <body>
-        <nav>
+        <nav aria-label="Primary Navigation">
             <!-- We use an unordered list for screenreaders-->
-            <ul>
-                <li><h2>American Steakhouse</h2></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu.html">Menu</a></li>
-                <li class="dropdown">
-                    <a href="#">About</a>
-                    <ul class="context">
-                        <li>
-                            <a href="/about/index.html">History</a>
+            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
+            <ul class="primaryNavigation">
+                <li
+                    class="primaryNavigation__item primaryNavigation__brandName"
+                >
+                    <h1>American Steakhouse</h1>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a href="/" class="primaryNavigation__link"> Home </a>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a href="/menu.html" class="primaryNavigation__link">
+                        Menu
+                    </a>
+                </li>
+                <li
+                    class="primaryNavigation__item--dropdown primaryNavigation__item"
+                >
+                    <a
+                        href="#"
+                        class="primaryNavigation__link"
+                        aria-haspopup="true"
+                    >
+                        About
+                    </a>
+                    <ul class="primaryNavigation__subList">
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/index.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                                >History</a
+                            >
                         </li>
-                        <li>
-                            <a href="/about/beer.html">Beverages</a>
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/beer.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                            >
+                                Beverages
+                            </a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="/contact.html" class="active">Contact</a></li>
+                <li class="primaryNavigation__item">
+                    <a
+                        href="/contact.html"
+                        class="primaryNavigation__link primaryNavigation__link--active"
+                    >
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <main>
+        <main class="contactPage">
             <article class="introduction">
-                <h1>Contact</h1>
-                <p>
+                <h2 class="introduction__title">Contact</h2>
+                <p class="introduction__text">
                     See here the contact page. You can contact us
                     <a href="mailto:AmericanSteakhouse@example.com">via mail</a>
                     or via post.
                 </p>
             </article>
             <article class="contactLocation">
-                <div>
-                    <h3>Location</h3>
-                    <p>
+                <div class="contactLocation__location">
+                    <h3 class="contactLocation__location__title">Location</h3>
+                    <p class="contactLocation__location__text">
                         Jackson<br />
                         WY 83001<br />
                         United States
                     </p>
                 </div>
-                <picture>
-                    <img src="/img/locationAmericanSteakHouse.png" alt="location American Steakhouse" />
+                <picture class="contactLocation__picture">
+                    <img
+                        src="/img/locationAmericanSteakHouse.png"
+                        alt="location American Steakhouse"
+                        class="contactLocation__picture__image"
+                    />
                 </picture>
-                
             </article>
-            <h3>Opening hours</h3>
+            <h3 class="contactOpeningHours__title">Opening hours</h3>
             <table class="contactOpeningHours">
-                <caption>Regular opening hours (opening hours on holidays may vary)</caption>
+                <caption class="contactOpeningHours__caption">
+                    Regular opening hours (opening hours on holidays may vary)
+                </caption>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
-                        <td>Closed</td>
+                        <td class="contactOpeningHours__day">Monday</td>
+                        <td class="contactOpeningHours__time">Closed</td>
                     </tr>
                     <tr>
-                        <td>Tuesday</td>
-                        <td>16.00 to 22.00</td>
+                        <td class="contactOpeningHours__day">Tuesday</td>
+                        <td class="contactOpeningHours__time">
+                            16.00 to 22.00
+                        </td>
                     </tr>
                     <tr>
-                        <td>Wednesday</td>
-                        <td>16.00 to 22.00</td>
+                        <td class="contactOpeningHours__day">Wednesday</td>
+                        <td class="contactOpeningHours__time">
+                            16.00 to 22.00
+                        </td>
                     </tr>
                     <tr>
-                        <td>Thursday</td>
-                        <td>16.00 to 22.00</td>
+                        <td class="contactOpeningHours__day">Thursday</td>
+                        <td class="contactOpeningHours__time">
+                            16.00 to 22.00
+                        </td>
                     </tr>
                     <tr>
-                        <td>Friday</td>
-                        <td>14.00 to 23.59</td>
+                        <td class="contactOpeningHours__day">Friday</td>
+                        <td class="contactOpeningHours__time">
+                            14.00 to 23.59
+                        </td>
                     </tr>
                     <tr>
-                        <td>Saturday</td>
-                        <td>14.00 to 23.59</td>
+                        <td class="contactOpeningHours__day">Saturday</td>
+                        <td class="contactOpeningHours__time">
+                            14.00 to 23.59
+                        </td>
                     </tr>
                     <tr>
-                        <td>Sunday</td>
-                        <td>14.00 to 23.59</td>
+                        <td class="contactOpeningHours__day">Sunday</td>
+                        <td class="contactOpeningHours__time">
+                            14.00 to 23.59
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </main>
 
-        <footer>
+        <footer class="footer">
             <p>
                 This site is a fictional description of a restaurant created for
-                a project for <a href="https://uu.nl/en">Utrecht University</a>.
-                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+                a project for
+                <a href="https://uu.nl/en" class="footer_link"
+                    >Utrecht University</a
+                >. © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
             </p>
         </footer>
     </body>

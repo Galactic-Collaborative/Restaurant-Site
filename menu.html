@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/navbar.css">
-        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/menu.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -16,115 +16,223 @@
     </head>
 
     <body>
-        <nav>
+        <nav aria-label="Primary Navigation">
             <!-- We use an unordered list for screenreaders-->
-            <ul>
-                <li><h1>American Steakhouse</h1></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu.html" class="active">Menu</a></li>
-                <li class="dropdown">
-                    <a href="#">About</a>
-                    <ul class="context">
-                        <li><a href="/about/index.html">History</a></li>
-                        <li>
-                            <a href="/about/beer.html" class="active"
-                                >Beverages</a
+            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
+            <ul class="primaryNavigation">
+                <li
+                    class="primaryNavigation__item primaryNavigation__brandName"
+                >
+                    <h1>American Steakhouse</h1>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a href="/" class="primaryNavigation__link"> Home </a>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a
+                        href="/menu.html"
+                        class="primaryNavigation__link primaryNavigation__link--active"
+                    >
+                        Menu
+                    </a>
+                </li>
+                <li
+                    class="primaryNavigation__item--dropdown primaryNavigation__item"
+                >
+                    <a
+                        href="/about/index.html"
+                        class="primaryNavigation__link"
+                        aria-haspopup="true"
+                    >
+                        About
+                    </a>
+                    <ul class="primaryNavigation__subList">
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/index.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                                >History</a
                             >
+                        </li>
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/beer.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                            >
+                                Beverages
+                            </a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li class="primaryNavigation__item">
+                    <a href="/contact.html" class="primaryNavigation__link">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <main>
+        <main class="menuPage">
             <table class="menuTable">
-                <caption>Steaks</caption>
+                <caption class="menuTable__caption">
+                    Steaks
+                </caption>
                 <tbody>
                     <tr>
-                        <td><h3>Rib eye</h3>Beatiful rib eye soaked in a barbecue inspired marinade.</td>
-                        <td>&euro; 24.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Rib eye</h3>
+                            Beatiful rib eye soaked in a barbecue inspired
+                            marinade.
+                        </td>
+                        <td class="menuTable__price">&euro; 24.-</td>
                     </tr>
                     <tr>
-                        <td><h3>Garlic-butter steak</h3>A delicious steak cooked to your liking from the top sirloin.</td>
-                        <td>&euro; 22.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Garlic-butter steak</h3>
+                            A delicious steak cooked to your liking from the top
+                            sirloin.
+                        </td>
+                        <td class="menuTable__price">&euro; 22.-</td>
                     </tr>
                     <tr>
-                        <td><h3>New York strip steak</h3>Tender piece of meat from the top part of the short loin, cooked New York style.</td>
-                        <td>&euro; 27.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">New York strip steak</h3>
+                            Tender piece of meat from the top part of the short
+                            loin, cooked New York style.
+                        </td>
+                        <td class="menuTable__price">&euro; 27.-</td>
                     </tr>
                     <tr>
-                        <td><h3>Filet mignon</h3>Delicious piece of meat from the tip of the tenderloin.</td>
-                        <td>&euro; 29.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Filet mignon</h3>
+                            Delicious piece of meat from the tip of the
+                            tenderloin.
+                        </td>
+                        <td class="menuTable__price">&euro; 29.-</td>
                     </tr>
                 </tbody>
             </table>
             <table class="menuTable">
-                <caption>Ribs</caption>
+                <caption class="menuTable__caption">
+                    Burgers
+                </caption>
                 <tbody>
                     <tr>
-                        <td><h3>Black angus burger</h3>Burger from 100% black angus beef with tomatoes, lettuce, red unions and our special sauce on a crispy bun.</td>
-                        <td>&euro; 18.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Black angus burger</h3>
+                            Burger from 100% black angus beef with tomatoes,
+                            lettuce, red unions and our special sauce on a
+                            crispy bun.
+                        </td>
+                        <td class="menuTable__price">&euro; 18.-</td>
                     </tr>
                     <tr>
-                        <td><h3>Cheese burger</h3>Delicious burger with a tomatoes, red unios, lettuce, pickles, mayo and mustard and of course cheddar cheese.</td>
-                        <td>Single: &euro; 16.- <br>Double: &euro; 20.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Cheese burger</h3>
+                            Delicious burger with a tomatoes, red unios,
+                            lettuce, pickles, mayo and mustard and of course
+                            cheddar cheese.
+                        </td>
+                        <td class="menuTable__price">Single: &euro; 16.- <br />Double: &euro; 20.-</td>
                     </tr>
                 </tbody>
             </table>
             <table class="menuTable">
-                <caption>Burgers</caption>
+                <caption class="menuTable__caption">
+                    Ribs
+                </caption>
                 <tbody>
                     <tr>
-                        <td><h3>Spareribs</h3>Spareribs cooked to perfection so the meat will just fall of the bone. Avaliable with the following marinades: smokey bbq, garlic, spicy and sweet and sour.</td>
-                        <td>2 half ribs: &euro; 18.-<br>3 half ribs: &euro; 24.-<br>4 half ribs: &euro; 30.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Spareribs</h3>
+                            Spareribs cooked to perfection so the meat will just
+                            fall of the bone. Avaliable with the following
+                            marinades: smokey bbq, garlic, spicy and sweet and
+                            sour.
+                        </td>
+                        <td class="menuTable__price">
+                            2 half ribs: &euro; 18.-<br />3 half ribs: &euro;
+                            24.-<br />4 half ribs: &euro; 30.-
+                        </td>
                     </tr>
                     <tr>
-                        <td><h3>Short Rib</h3>Slow cooked short ribs that result in the most tender and tasteful of al ribs.</td>
-                        <td>&euro; 26.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Short Rib</h3>
+                            Slow cooked short ribs that result in the most
+                            tender and tasteful of al ribs.
+                        </td>
+                        <td class="menuTable__price">&euro; 26.-</td>
                     </tr>
                 </tbody>
-            </table>  
+            </table>
             <table class="menuTable">
-                <caption>Seafood</caption>  
+                <caption class="menuTable__caption">
+                    Seafood
+                </caption>
                 <tbody>
                     <tr>
-                        <td><h3>BBQ Shrimp</h3>Delicious shrimp seasoned with lemon juice, butter and garlic.</td>
-                        <td>&euro; 24.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">BBQ Shrimp</h3>
+                            Delicious shrimp seasoned with lemon juice, butter
+                            and garlic.
+                        </td>
+                        <td class="menuTable__price">&euro; 24.-</td>
                     </tr>
                     <tr>
-                        <td><h3>Fish and chips</h3>Our take on the traditional fish and chips .</td>
-                        <td>&euro; 22.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Fish and chips</h3>
+                            Our take on the traditional fish and chips.
+                        </td>
+                        <td class="menuTable__price">&euro; 22.-</td>
                     </tr>
                 </tbody>
-            </table>    
+            </table>
             <table class="menuTable">
-                <caption>Sidedishes</caption> 
+                <caption class="menuTable__caption">
+                    Sidedishes
+                </caption>
                 <tbody>
                     <tr>
-                        <td><h3>French Fries</h3>Homemade French fries</td>
-                        <td>&euro; 6.-</td>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">French Fries</h3>
+                            Homemade french fries.
+                        </td>
+                        <td class="menuTable__price">&euro; 6.-</td>
                     </tr>
                     <tr>
-                        <td><h3>Green Bean Bundles</h3>Grean beans wrapped with bacon</td>
-                        <td>&euro; 6.-</td>
-                    <tr>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Green Bean Bundles</h3>
+                            Grean beans wrapped with bacon.
+                        </td>
+                        <td class="menuTable__price">&euro; 6.-</td>
                     </tr>
-                        <td><h3>Salad</h3>A coleslaw salad</td>
-                        <td>&euro; 6.-</td>
+
                     <tr>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Salad</h3>
+                            A coleslaw salad.
+                        </td>
+                        <td class="menuTable__price">&euro; 6.-</td>
                     </tr>
-                        <td><h3>Corn</h3>Corn on the cob</td>
-                        <td>&euro; 6.-</td>
+                    <tr>
+                        <td class="menuTable__dish">
+                            <h3 class="menuTable__dish__title">Corn</h3>
+                            Corn on the cob.
+                        </td>
+                        <td class="menuTable__price">&euro; 6.-</td>
                     </tr>
                 </tbody>
-            </table>      
+            </table>
         </main>
-        
-        <footer>
+
+        <footer class="footer">
             <p>
                 This site is a fictional description of a restaurant created for
-                a project for <a href="https://uu.nl">Utrecht University</a>. ©
+                a project for <a href="https://uu.nl" class="footer_link">Utrecht University</a>. ©
                 Thijs Boerefijn, Jasper Breugem, Joachim Dekker
             </p>
         </footer>

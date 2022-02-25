@@ -1,11 +1,16 @@
+/* All pages */
+
+/* Custom variables */
 :root {
+    /* Theme coloring */
     --clr-background: #ffffff;
     --clr-background-menu: #1a1a1a;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
 
+    /* Custom lengths */
     --nav-height: 75px;
-    --footer-height: 34px;
+    --main-width: min(calc(1000px + 10vmax), 100%);
 }
 
 body,
@@ -17,29 +22,52 @@ html {
     background-color: var(--clr-background);
 }
 
+/*  Make sure everything is box-sized at border-box, 
+    as this is the box model that is logical */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+main {
+    max-width: calc(1000px + 10vmax);
+    width: 100%;
+    padding: 1vmax 5vmax;
+    margin: var(--nav-height) auto 0;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    position: relative;
+    overflow: hidden;
 }
 
+/* Introduction */
+article.introduction {
+    padding: 5vh 0;
+}
+
+article.introduction > h2 {
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+}
+
+article.introduction > p {
+    margin-bottom: 0;
+}
+
+/* Navigation bar */
 .primaryNavigation {
     position: fixed;
-    z-index: 1;
+    width: 100%;
+    height: var(--nav-height);
+    top: 0;
     margin: 0;
     padding: 0;
-    top: 0;
-    height: var(--nav-height);
-    width: 100%;
+    z-index: 1;
+
     background-color: var(--clr-nav);
     color: var(--clr-on-nav);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,34 +75,46 @@ html {
     gap: clamp(1vw, 3vw, 40px);
 }
 
-.primaryNavigation :nth-child(2) {
+/*  We use flex-order to order the logoname to be in the middle
+    Screenreaders will not read this property, 
+    so they will read out the logoname first and then the navigation links */
+.primaryNavigation .primaryNavigation__item:nth-child(2) {
     order: 1;
 }
-.primaryNavigation :nth-child(3) {
+
+.primaryNavigation .primaryNavigation__item:nth-child(3) {
     order: 2;
 }
 
-.primaryNavigation :first-child {
+.primaryNavigation .primaryNavigation__brandName {
     order: 3;
 }
 
-.primaryNavigation :nth-child(4) {
+.primaryNavigation .primaryNavigation__item:nth-child(4) {
     order: 4;
 }
-.primaryNavigation :nth-child(5) {
-    order: 5;
-}
 
-.primaryNavigation__item h1,
-.primaryNavigation__item h2 {
-    text-transform: uppercase;
-    text-align: center;
+.primaryNavigation .primaryNavigation__item:nth-child(5) {
+    order: 5;
 }
 
 .primaryNavigation__item {
     height: 100%;
     display: flex;
     align-items: center;
+    list-style: none;
+}
+
+.primaryNavigation__item h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (max-width: 630px) {
+    .primaryNavigation__item h1 {
+        width: 160px;
+        line-height: 23px;
+    }
 }
 
 .primaryNavigation__link {
@@ -83,14 +123,17 @@ html {
 }
 
 .primaryNavigation__link::after {
-    content: "";
+    content: ""; /* hack - otherwise it will not show */
+
     display: block;
-    margin-left: -5px;
     width: calc(100% + 10px);
     height: 1px;
+    margin-left: -5px;
     border-radius: 10px;
-    background-color: var(--clr-on-nav);
     transform: scale(0, 1);
+    transition: transform ease-in-out 0.2s;
+
+    background-color: var(--clr-on-nav);
 }
 
 .primaryNavigation__link--active::after {
@@ -98,20 +141,12 @@ html {
 }
 
 .primaryNavigation__link:hover::after,
-.primaryNavigation__link:focus-within::after,
+.primaryNavigation__link:focus-visible::after,
 .primaryNavigation__link--active::after {
     transform: scale(1, 1);
 }
 
-/* Add margin for main content except on landingPage */
-nav + main:not(.landingPage) {
-    margin-top: var(--nav-height);
-}
-
-.primaryNavigation__item {
-    list-style: none;
-}
-
+/* Navigation bar -- subnav */
 .primaryNavigation__subList {
     --text-padding: 1rem;
 
@@ -127,12 +162,8 @@ nav + main:not(.landingPage) {
 
 .primaryNavigation__link--subLink {
     padding: var(--text-padding);
-}
-
-.primaryNavigation__item--dropdown:hover .primaryNavigation__subList,
-.primaryNavigation__item--dropdown:focus-within .primaryNavigation__subList {
-    display: flex;
-    flex-direction: column;
+    border: 2px solid transparent;
+    width: 100%;
 }
 
 .primaryNavigation__link--subLink:hover {
@@ -144,13 +175,17 @@ nav + main:not(.landingPage) {
     outline: none;
 }
 
+.primaryNavigation__item--dropdown:hover .primaryNavigation__subList,
+.primaryNavigation__item--dropdown:focus-within .primaryNavigation__subList {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
 .footer {
     --footer-height: 34px;
     min-height: var(--footer-height);
     background-color: #1a1a1a;
-}
-
-main {
 }
 
 .footer p {
@@ -159,12 +194,4 @@ main {
     text-align: center;
     color: white;
     font-size: 0.75rem;
-}
-
-@media screen and (max-width: 630px) {
-    .primaryNavigation__item h1,
-    .primaryNavigation__item h2 {
-        width: 160px;
-        line-height: 23px;
-    }
 }

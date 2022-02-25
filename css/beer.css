@@ -1,71 +1,23 @@
-body {
-    margin: 0;
-}
-
 main {
     width: min(1000px, 100vw);
     margin: 0 auto;
 }
 
-article.introduction {
+.introduction {
     padding: 5vh 0;
 }
 
-article.introduction > h1 {
+.introduction > .introduction__title {
     font-size: 3em;
     margin: 0 0 0.5em 0;
 }
 
-article.introduction > p {
+.introduction > .introduction__text {
     margin-bottom: 0;
 }
 
-article.contactLocation > div {
-    display: inline-block;
-}
-
-article.contactLocation > div > h3 {
-    margin: 0 0 0.2em 0;
-}
-
-article.contactLocation > div > p {
-    margin: 0;
-}
-
-article.contactLocation > picture > img {
-    display: inline-block;
-    vertical-align: top;
-    width: 200px;
-    height: 100px;
-    object-fit: cover;
-    margin-left: max(17px, 5%);
-}
-
-main > h3 {
-    margin: 5vh 0 0.2em 0;
-}
-
-table.contactOpeningHours {
-    position: relative;
-    border-collapse: collapse;
-}
-
-table.contactOpeningHours > caption {
-    text-align: left;
-    font-weight: bold;
-}
-
-table.contactOpeningHours tr > td {
-    border: 1px solid var(--clr-background-menu);
-    padding: 7px;
-}
-
-table.contactOpeningHours td:nth-child(1) {
-    width: max(140px, 10vw);
-}
-
 /* Beverage Grid */
-section.beverageGrid {
+.beverageGrid {
     --grid-item-width: min(300px, 30vw);
 
     display: grid;
@@ -73,65 +25,31 @@ section.beverageGrid {
     gap: min(50px, 5vw);
 }
 
-section.beverageGrid > article {
+.beverageGrid > .beverageGrid__article {
     background-color: whitesmoke;
     border-radius: 10px;
-
     --grid-item-padding: 1vh;
     width: var(--grid-item-width);
     padding: var(--grid-item-padding);
 }
 
-section.beverageGrid > article img {
+.beverageGrid > .beverageGrid__article .beverageGrid__article__image {
     border-radius: 4px;
     width: calc(var(--grid-item-width) - 2 * var(--grid-item-padding));
     height: calc(var(--grid-item-width) * 0.9);
     object-fit: cover;
 }
 
-section.beverageGrid > article > h3 {
+.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageTitle {
     font-size: 1.5rem;
     margin: 0.75rem 0 0.5rem;
 }
 
-section.beverageGrid > article > p {
+.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageExplanation {
     margin: 0 0 0.75rem 0;
 }
 
-section.beverageGrid > article a {
-    display: inline-block;
-    background-color: blueviolet;
-    color: white;
+.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageLink {
+    color: blueviolet;
     font-weight: bold;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1234px) {
-    main {
-        width: min(700px, 50vw);
-    }
-}
-
-@media screen and (max-width: 630px) {
-    main {
-        width: 50vw;
-        text-align: center;
-    }
-
-    table.contactOpeningHours {
-        text-align: left;
-        margin: 0 auto 5vh auto;
-    }
-
-    table.contactOpeningHours > caption {
-        text-align: center;
-    }
-
-    article.contactLocation > picture > img {
-        display: block;
-        margin: 30px auto;
-    }
 }
