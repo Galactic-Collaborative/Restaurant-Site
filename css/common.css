@@ -162,6 +162,8 @@ article.introduction > p {
 
 .primaryNavigation__link--subLink {
     padding: var(--text-padding);
+    border: 2px solid transparent;
+    width: 100%;
 }
 
 .primaryNavigation__link--subLink:hover {

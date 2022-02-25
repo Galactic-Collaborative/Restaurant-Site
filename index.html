@@ -2,143 +2,78 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="The American Steakhouse company has provided the best meat one has ever tasted for nearly a century now. Please come to our restaurant for an unforgettable experience"
-        />
-        <meta
-            name="keywords"
-            content="Steak, Meat, Restaurant, Josiah Goodwill"
-        />
         <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
-        <title>American Steakhouse - For the meatlover</title>
+
+        <title>American Steakhouse</title>
     </head>
     <body>
-        <nav aria-label="Primary Navigation">
+        <nav>
             <!-- We use an unordered list for screenreaders-->
-            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
-            <ul class="primaryNavigation">
-                <li
-                    class="primaryNavigation__item primaryNavigation__brandName"
-                >
-                    <h1>American Steakhouse</h1>
-                </li>
-                <li class="primaryNavigation__item">
-                    <a
-                        href="/"
-                        class="primaryNavigation__link primaryNavigation__link--active"
-                    >
-                        Home
-                    </a>
-                </li>
-                <li class="primaryNavigation__item">
-                    <a href="/menu.html" class="primaryNavigation__link">
-                        Menu
-                    </a>
-                </li>
-                <li
-                    class="primaryNavigation__item--dropdown primaryNavigation__item"
-                >
-                    <a
-                        href="#"
-                        class="primaryNavigation__link"
-                        aria-haspopup="true"
-                    >
-                        About
-                    </a>
-                    <ul class="primaryNavigation__subList">
-                        <li
-                            class="primaryNavigation__item primaryNavigation__item--subItem"
-                        >
-                            <a
-                                href="/about/index.html"
-                                class="primaryNavigation__link primaryNavigation__link--subLink"
-                                >History</a
+            <ul>
+                <li><h1>American Steakhouse</h1></li>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul class="context">
+                        <li><a href="/about/index.html">History</a></li>
+                        <li>
+                            <a href="/about/beer.html" class="active"
+                                >Beverages</a
                             >
-                        </li>
-                        <li
-                            class="primaryNavigation__item primaryNavigation__item--subItem"
-                        >
-                            <a
-                                href="/about/beer.html"
-                                class="primaryNavigation__link primaryNavigation__link--subLink"
-                            >
-                                Beverages
-                            </a>
                         </li>
                     </ul>
                 </li>
-                <li class="primaryNavigation__item">
-                    <a href="/contact.html" class="primaryNavigation__link">
-                        Contact
-                    </a>
-                </li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
         <main class="landingPage">
-            <video
-                id="backgroundVideo"
-                aria-hidden="true"
-                tabindex="-1"
-                muted
-                autoplay
-                loop
-            >
+            <video id="backgroundVideo" aria-hidden="true" muted autoplay loop>
                 <!-- <source src="video/rollingStick.webm" type="video/webm" /> -->
-                <source src="video/steak.mp4" type="video/mp4" />
+                <source src="video/rollingStick.mp4" type="video/mp4" />
             </video>
-            <section class="brandHero">
-                <header class="brandHero__header">
-                    <h2>We love meat.</h2>
-                    <h3>And we hope you do too</h3>
+            <div class="landingPage__clipBackground">
+                <header>
+                    <h1>We love meat.</h1>
+                    <h2>And we hope you do too</h2>
                     <p>
                         Here at American Steakhouse we strive to deliver the
                         best meat experience you have ever experienced.
                     </p>
                 </header>
-                <span class="material-icons" id="welcomingArrow">
-                    arrow_downward
-                </span>
-            </section>
-            <section class="welcomingMessage">
-                <article class="welcomingMessage__article">
-                    <h3>Welcome to meat paradise!</h3>
-                    <p>
-                        Founded in 1923, the American Steakhouse Company has
-                        deliverd top quality meat to your table for a century
-                        now. Whether you like a burger, steak or something
-                        green, we have got you covered.
-                        <a href="menu.html" class="welcomingMessage_link">
-                            See our menu for all our dishes
-                        </a>
-                    </p>
-                    <p>
-                        The American Steakhouse has a rich history. The story
-                        begins far before the establishment of American
-                        Steakhouse in 1923 in Jackson, Wyoming. See how our
-                        restaurant evolved over the century and see us prepare
-                        for our grand 100 year anniversary.
-                        <a href="about.html" class="welcomingMessage_link">
-                            Find out more about our history!
-                        </a>
-                    </p>
-                </article>
-            </section>
+                <span class="material-icons"> arrow_downward </span>
+            </div>
+            <div class="landingPage__WelcomeMessageContainer">
+                <p>
+                    Founded in 1923, the American Steakhouse Company has
+                    deliverd top quality meat to your table for a century now.
+                    Whether you like a burger, steak or something green, we have
+                    got you covered.
+                    <a href="menu.html">See our menu for all our dishes</a>
+                </p>
+                <p>
+                    The American Steakhouse has a rich history. The story begins
+                    far before the establishment of American Steakhouse in 1923
+                    in Jackson, Wyoming. See how our restaurant evolved over the
+                    century and see us prepare for our grand 100 year
+                    anniversary.
+                    <a href="about/index.html"> Find out more about our history!</a>
+                </p>
+            </div>
         </main>
-        <footer class="footer">
+        <footer>
             <p>
                 This site is a fictional description of a restaurant created for
-                a project for
-                <a href="https://uu.nl/en" class="footer_link">
-                    Utrecht University</a
-                >. © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+                a project for <a href="https://uu.nl/en">Utrecht University</a>.
+                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
             </p>
         </footer>
     </body>
