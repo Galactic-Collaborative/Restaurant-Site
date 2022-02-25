@@ -11,24 +11,65 @@
     </head>
 
     <body>
-        <nav>
+        <nav aria-label="Primary Navigation">
             <!-- We use an unordered list for screenreaders-->
-            <ul>
-                <li><h2>American Steakhouse</h2></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu.html">Menu</a></li>
-                <li class="dropdown">
-                    <a href="#">About</a>
-                    <ul class="context">
-                        <li>
-                            <a href="/about/index.html">History</a>
+            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
+            <ul class="primaryNavigation">
+                <li
+                    class="primaryNavigation__item primaryNavigation__brandName"
+                >
+                    <h1>American Steakhouse</h1>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a
+                        href="/"
+                        class="primaryNavigation__link primaryNavigation__link--active"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a href="/menu.html" class="primaryNavigation__link">
+                        Menu
+                    </a>
+                </li>
+                <li
+                    class="primaryNavigation__item--dropdown primaryNavigation__item"
+                >
+                    <a
+                        href="#"
+                        class="primaryNavigation__link"
+                        aria-haspopup="true"
+                    >
+                        About
+                    </a>
+                    <ul class="primaryNavigation__subList">
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/index.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                                >History</a
+                            >
                         </li>
-                        <li>
-                            <a href="/about/beer.html">Beverages</a>
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/beer.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                            >
+                                Beverages
+                            </a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="/contact.html" class="active">Contact</a></li>
+                <li class="primaryNavigation__item">
+                    <a href="/contact.html" class="primaryNavigation__link">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -51,13 +92,17 @@
                     </p>
                 </div>
                 <picture>
-                    <img src="/img/locationAmericanSteakHouse.png" alt="location American Steakhouse" />
+                    <img
+                        src="/img/locationAmericanSteakHouse.png"
+                        alt="location American Steakhouse"
+                    />
                 </picture>
-                
             </article>
             <h3>Opening hours</h3>
             <table class="contactOpeningHours">
-                <caption>Regular opening hours (opening hours on holidays may vary)</caption>
+                <caption>
+                    Regular opening hours (opening hours on holidays may vary)
+                </caption>
                 <tbody>
                     <tr>
                         <td>Monday</td>
