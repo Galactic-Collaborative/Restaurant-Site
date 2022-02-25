@@ -15,7 +15,8 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
-        <title>Alcoholic Beverages</title>
+        
+        <title>Beverages</title>
     </head>
     <body>
         <nav aria-label="Primary Navigation">
@@ -80,8 +81,8 @@
 
         <main>
             <article class="introduction">
-                <h1>Alcoholic beverages</h1>
-                <p>
+                <h1 class="introduction__title">Alcoholic beverages</h1>
+                <p class="introduction__text">
                     With your delicious meal you of course want the drink to be
                     as delicious as the food. Because of this we have selected a
                     range of beverages just for you! Whether you're a wine or a
@@ -92,7 +93,7 @@
                     selection of wines from vineyards we have selected with the
                     upmost care.
                 </p>
-                <p>
+                <p class="introduction__text">
                     If you have any questions about the beers or the wine you
                     can just ask our beer expert and sommelier when you come for
                     diner!
@@ -101,18 +102,28 @@
             <section class="beverageGrid">
                 <article class="beverageGrid__article">
                     <picture>
-                        <img src="/img/darkNight.jpg" alt="dark night" class="beverageGrid__article_image" />
+                        <img src="/img/paleale.jpg" alt="Pale Ale" class="beverageGrid__article__image" />
                     </picture>
-                    <h3>Beer 1</h3>
-                    <p>This beer has a very rich flavour</p>
+                    <h3 class="beverageGrid__article__beverageTitle">Sierra Nevada Pale Ale</h3>
+                    <p class="beverageGrid__article__beverageExplanation">A beatiful hop-forward pale ale with a subtle hint of citrus. </p>
+                    <!--https://www.taptrail.com/the-25-most-important-american-craft-beers/-->
                 </article>
                 <article class="beverageGrid__article">
                     <picture>
-                        <img src="/img/darkNight.jpg" alt="dark night" class="beverageGrid__article_image" />
+                        <img src="/img/lager.jpg" alt="Boston Lager" class="beverageGrid__article__image" />
                     </picture>
-                    <h3>Beer 1</h3>
-                    <p>This beer has a very rich flavour</p>
-                    <a>Find out more</a>
+                    <h3 class="beverageGrid__article__beverageTitle">Sam Adams Boston Lager</h3>
+                    <p class="beverageGrid__article__beverageExplanation">A deep amber to golden colored craft beer with a balanced but distinctive taste of spicy hops and sweet roasted malts.</p>
+                    <a class="beverageGrid__article__beverageLink" href="https://www.samueladams.com/our-beers/originals/lager/boston-lager" target="_blank">Find out more</a>
+                    <!--https://www.taptrail.com/the-25-most-important-american-craft-beers/-->
+                </article>
+                <article class="beverageGrid__article">
+                    <picture>
+                        <img src="/img/chardonnay.jpg" alt="Chardonnay" class="beverageGrid__article__image" />
+                    </picture>
+                    <h3 class="beverageGrid__article__beverageTitle">Twill Cellars Chardonnay</h3>
+                    <p class="beverageGrid__article__beverageExplanation">This beatiful chardonnay from 2018 has hints of pink grapefruit, apple and lemon while also having hints of peach and nectarine .</p>
+                    <!--https://cluboenologique.com/product/chardonnay-14/-->
                 </article>
             </section>
         </main>
