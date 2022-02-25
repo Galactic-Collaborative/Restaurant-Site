@@ -8,7 +8,7 @@
             name="description"
             content="Alcoholic beverages of the American Steakhouse"
         />
-        <link rel="stylesheet" href="/css/navbar.css" />
+        <link rel="stylesheet" href="/css/common.css" />
         <link rel="stylesheet" href="/css/beer.css" />
         <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
         <link
@@ -18,24 +18,63 @@
         <title>Alcoholic Beverages</title>
     </head>
     <body>
-        <nav>
+        <nav aria-label="Primary Navigation">
             <!-- We use an unordered list for screenreaders-->
-            <ul>
-                <li><h1>American Steakhouse</h1></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu.html">Menu</a></li>
-                <li class="dropdown">
-                    <a href="#">About</a>
-                    <ul class="context">
-                        <li><a href="/about/index.html">History</a></li>
-                        <li>
-                            <a href="/about/beer.html" class="active"
-                                >Beverages</a
+            <!-- This navbar is based on the navbar from w3c: https://www.w3.org/WAI/tutorials/menus/flyout/ -->
+            <ul class="primaryNavigation">
+                <li class="primaryNavigation__item">
+                    <h1>American Steakhouse</h1>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a
+                        href="/"
+                        class="primaryNavigation__link primaryNavigation__link--active"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li class="primaryNavigation__item">
+                    <a href="/menu.html" class="primaryNavigation__link">
+                        Menu
+                    </a>
+                </li>
+                <li
+                    class="primaryNavigation__item--dropdown primaryNavigation__item"
+                >
+                    <a
+                        href="#"
+                        class="primaryNavigation__link"
+                        aria-haspopup="true"
+                    >
+                        About
+                    </a>
+                    <ul class="primaryNavigation__subList">
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/index.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                                >History</a
                             >
+                        </li>
+                        <li
+                            class="primaryNavigation__item primaryNavigation__item--subItem"
+                        >
+                            <a
+                                href="/about/beer.html"
+                                class="primaryNavigation__link primaryNavigation__link--subLink"
+                            >
+                                Beverages
+                            </a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li class="primaryNavigation__item">
+                    <a href="/contact.html" class="primaryNavigation__link">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -60,16 +99,16 @@
                 </p>
             </article>
             <section class="beverageGrid">
-                <article>
+                <article class="beverageGrid__article">
                     <picture>
-                        <img src="/img/darkNight.jpg" alt="dark night" />
+                        <img src="/img/darkNight.jpg" alt="dark night" class="beverageGrid__article_image" />
                     </picture>
                     <h3>Beer 1</h3>
                     <p>This beer has a very rich flavour</p>
                 </article>
-                <article>
+                <article class="beverageGrid__article">
                     <picture>
-                        <img src="/img/darkNight.jpg" alt="dark night" />
+                        <img src="/img/darkNight.jpg" alt="dark night" class="beverageGrid__article_image" />
                     </picture>
                     <h3>Beer 1</h3>
                     <p>This beer has a very rich flavour</p>
@@ -78,11 +117,13 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="footer">
             <p>
                 This site is a fictional description of a restaurant created for
-                a project for <a href="https://uu.nl/en">Utrecht University</a>.
-                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+                a project for
+                <a href="https://uu.nl/en" class="footer_link">
+                    Utrecht University</a
+                >. © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
             </p>
         </footer>
     </body>
