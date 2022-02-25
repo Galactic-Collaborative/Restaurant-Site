@@ -1,3 +1,14 @@
+main {
+    max-width: unset;
+    padding: 0;
+}
+
+.introduction {
+    margin: 0 auto;
+    max-width: 1000px;
+    color: white;
+}
+
 .menuPage {
     background-color: var(--clr-background-menu);
 }
@@ -24,7 +35,8 @@
     text-align: center;
 }
 
-.menuTable .menuTable__dish, .menuTable .menuTable__price {
+.menuTable .menuTable__dish,
+.menuTable .menuTable__price {
     border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
@@ -33,7 +45,7 @@
     margin: 0;
 }
 
-img.food_picture{
+img.food_picture {
     clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
     height: 60vh;
     width: 100%;
@@ -42,19 +54,16 @@ img.food_picture{
     overflow: hidden;
 }
 
-
-
-div.menu_introduction{
-
+div.menu_introduction {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
 }
 
-div.menu_introduction > p{
+div.menu_introduction > p {
     color: white;
 }
 
-div.menu_introduction > h1{
+div.menu_introduction > h1 {
     color: white;
 }
