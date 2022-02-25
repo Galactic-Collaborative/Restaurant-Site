@@ -5,22 +5,98 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Restaurant</title>
-        <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="css/beer.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/kay2rdn.css" />
     </head>
 
     <body>
         <nav>
-            <h1>RESTAURANT</h1>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="active">Contact</a>
+            <!-- We use an unordered list for screenreaders-->
+            <ul>
+                <li><h2>American Steakhouse</h2></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul class="context">
+                        <li>
+                            <a href="/about/index.html">History</a>
+                        </li>
+                        <li>
+                            <a href="/about/beer.html">Beverages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/contact.html" class="active">Contact</a></li>
+            </ul>
         </nav>
 
-        <p>Hello World</p>
+        <main>
+            <article class="introduction">
+                <h1>Contact</h1>
+                <p>
+                    See here the contact page. You can contact us
+                    <a href="mailto:AmericanSteakhouse@example.com">via mail</a>
+                    or via post.
+                </p>
+            </article>
+            <article class="contactLocation">
+                <div>
+                    <h3>Location</h3>
+                    <p>
+                        Jackson<br />
+                        WY 83001<br />
+                        United States
+                    </p>
+                </div>
+                <picture>
+                    <img src="/img/locationAmericanSteakHouse.png" alt="location American Steakhouse" />
+                </picture>
+                
+            </article>
+            <h3>Opening hours</h3>
+            <table class="contactOpeningHours">
+                <caption>Regular opening hours (opening hours on holidays may vary)</caption>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>16.00 to 22.00</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>16.00 to 22.00</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>16.00 to 22.00</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>14.00 to 23.59</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>14.00 to 23.59</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>14.00 to 23.59</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
         <footer>
-
+            <p>
+                This site is a fictional description of a restaurant created for
+                a project for <a href="https://uu.nl/en">Utrecht University</a>.
+                © Thijs Boerefijn, Jasper Breugem, Joachim Dekker
+            </p>
         </footer>
     </body>
 </html>
