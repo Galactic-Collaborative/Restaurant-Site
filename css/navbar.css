@@ -5,6 +5,7 @@
     --clr-on-nav: #ffffff;
 
     --nav-height: 75px;
+    --footer-height: 34px;
 }
 
 body,
@@ -148,13 +149,12 @@ nav > div > .dropdown > a:focus {
 }
 
 footer {
-    --footer-height: 34px;
     height: var(--footer-height);
     background-color: #1a1a1a;
 }
 
 main {
-    min-height: calc(100vh - var(--nav-height) - 34px);
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 }
 
 footer > p {
