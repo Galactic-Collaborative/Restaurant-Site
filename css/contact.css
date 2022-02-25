@@ -1,10 +1,7 @@
 .contactPage {
     width: min(1000px, 100vw);
-    margin: 0 auto;
-}
-
-.introduction {
-    margin: 5vh 0;
+    margin: var(--nav-height) auto 0 auto;
+    min-height: calc(100vh - 75px - 34px);
 }
 
 .introduction > .introduction__title {

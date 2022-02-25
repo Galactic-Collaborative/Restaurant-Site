@@ -10,6 +10,7 @@
 
     /* Custom lengths */
     --nav-height: 75px;
+    --footer-height: 34px;
     --main-width: min(calc(1000px + 10vmax), 100%);
 }
 
@@ -183,7 +184,6 @@ article.introduction > p {
 
 /* Footer */
 .footer {
-    --footer-height: 34px;
     min-height: var(--footer-height);
     background-color: #1a1a1a;
 }
