@@ -36,6 +36,7 @@ body {
     width: var(--image-size);
     height: var(--image-size);
     border-radius: 4px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: calc(850px)) {
@@ -75,7 +76,6 @@ body {
     width: calc(min(1000px, calc(100vw - 10vmax)) - 4vw);
     height: clamp(300px, 25vw, 700px);
     margin-left: 2vw;
-    object-fit: cover;
 }
 
 .plotpoint--important > p {

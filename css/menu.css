@@ -22,7 +22,7 @@ main {
     border-radius: 10px;
 }
 
-.menuTable > .menuTable__caption {
+.menuTable__caption {
     color: var(--clr-on-nav);
     margin-top: 15px;
     text-align: left;
@@ -30,40 +30,26 @@ main {
     font-size: x-large;
 }
 
-.menuTable .menuTable__price {
+.menuTable__price {
     width: clamp(90px, 7vw, 150px);
     text-align: center;
 }
 
-.menuTable .menuTable__dish,
-.menuTable .menuTable__price {
+.menuTable__dish,
+.menuTable__price {
     border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
 
-.menuTable .menuTable__dish__title {
+.menuTable__dish__title {
     margin: 0;
 }
 
-img.food_picture {
+.food_picture {
     clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
     height: 60vh;
     width: 100%;
     position: relative;
     object-fit: cover;
     overflow: hidden;
-}
-
-div.menu_introduction {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-
-div.menu_introduction > p {
-    color: white;
-}
-
-div.menu_introduction > h1 {
-    color: white;
 }
