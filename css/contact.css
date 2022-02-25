@@ -2,25 +2,19 @@
     width: min(1000px, 100vw);
 }
 
-.contactLocation > .contactLocation__location {
+.contactLocation__location {
     display: inline-block;
 }
 
-.contactLocation
-    > .contactLocation__location
-    > .contactLocation__location__title {
+.contactLocation__location__title {
     margin: 0 0 0.2em 0;
 }
 
-.contactLocation
-    > .contactLocation__location
-    > .contactLocation__location__text {
+.contactLocation__location__text {
     margin: 0;
 }
 
-.contactLocation
-    > .contactLocation__picture
-    > .contactLocation__picture__image {
+.contactLocation__picture__image {
     display: inline-block;
     vertical-align: top;
     width: 200px;
@@ -29,7 +23,7 @@
     margin-left: max(17px, 5%);
 }
 
-.contactPage > .contactOpeningHours__title {
+.contactOpeningHours__title {
     margin: 5vh 0 0.2em 0;
 }
 
@@ -38,18 +32,19 @@
     border-collapse: collapse;
 }
 
-.contactOpeningHours > .contactOpeningHours__caption {
+.contactOpeningHours__caption {
     text-align: left;
     font-weight: bold;
+    font-size: 0.8;
 }
 
-.contactOpeningHours .contactOpeningHours__day,
-.contactOpeningHours .contactOpeningHours__time {
+.contactOpeningHours__day,
+.contactOpeningHours__time {
     border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
 
-.contactOpeningHours .contactOpeningHours__day {
+.contactOpeningHours__day {
     width: max(140px, 10vw);
 }
 
@@ -70,13 +65,11 @@
         margin: 0 auto 5vh auto;
     }
 
-    .contactOpeningHours > .contactOpeningHours__caption {
+    .contactOpeningHours__caption {
         text-align: center;
     }
 
-    .contactPage__contactLocation
-        > .contactLocation__picture
-        > .contactLocation__picture__image {
+    .contactLocation__picture__image {
         display: block;
         margin: 30px auto;
     }

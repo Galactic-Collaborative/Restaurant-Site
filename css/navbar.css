@@ -150,9 +150,6 @@ nav + main:not(.landingPage) {
     background-color: #1a1a1a;
 }
 
-main {
-}
-
 .footer p {
     padding: 0.5rem;
     margin: 0 auto;
