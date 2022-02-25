@@ -36,6 +36,8 @@ article.contactLocation > picture > img {
     display: inline-block;
     vertical-align: top;
     width: 200px;
+    height: 100px;
+    object-fit: cover;
     margin-left: max(17px, 5%);
 }
 
