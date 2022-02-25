@@ -3,7 +3,7 @@
 /* Custom variables */
 :root {
     /* Theme coloring */
-    --clr-background: #ffffff;
+    --clr-background: #1a1a1a;
     --clr-background-menu: #1a1a1a;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
@@ -46,6 +46,7 @@ main {
 /* Introduction */
 article.introduction {
     padding: 5vh 0;
+    color: white;
 }
 
 article.introduction > h2 {
@@ -65,7 +66,7 @@ article.introduction > p {
     top: 0;
     margin: 0;
     padding: 0;
-    z-index: 1;
+    z-index: 2;
 
     background-color: var(--clr-nav);
     color: var(--clr-on-nav);
