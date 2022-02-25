@@ -1,21 +1,3 @@
-main {
-    width: min(1000px, 100vw);
-    margin: 0 auto;
-}
-
-.introduction {
-    padding: 5vh 0;
-}
-
-.introduction > .introduction__title {
-    font-size: 3em;
-    margin: 0 0 0.5em 0;
-}
-
-.introduction > .introduction__text {
-    margin-bottom: 0;
-}
-
 /* Beverage Grid */
 .beverageGrid {
     --grid-item-width: min(300px, 30vw);
@@ -25,7 +7,7 @@ main {
     gap: min(50px, 5vw);
 }
 
-.beverageGrid > .beverageGrid__article {
+.beverageGrid__article {
     background-color: whitesmoke;
     border-radius: 10px;
     --grid-item-padding: 1vh;
@@ -33,23 +15,23 @@ main {
     padding: var(--grid-item-padding);
 }
 
-.beverageGrid > .beverageGrid__article .beverageGrid__article__image {
+.beverageGrid__article__image {
     border-radius: 4px;
     width: calc(var(--grid-item-width) - 2 * var(--grid-item-padding));
     height: calc(var(--grid-item-width) * 0.9);
     object-fit: cover;
 }
 
-.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageTitle {
+.beverageGrid__article__beverageTitle {
     font-size: 1.5rem;
     margin: 0.75rem 0 0.5rem;
 }
 
-.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageExplanation {
+.beverageGrid__article__beverageExplanation {
     margin: 0 0 0.75rem 0;
 }
 
-.beverageGrid > .beverageGrid__article > .beverageGrid__article__beverageLink {
+.beverageGrid__article__beverageLink {
     color: blueviolet;
     font-weight: bold;
 }

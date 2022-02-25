@@ -1,33 +1,26 @@
 .contactPage {
     width: min(1000px, 100vw);
-    margin: 0 auto;
-}
-
-.introduction {
-    margin: 5vh 0;
-}
-
-.introduction > .introduction__title {
-    margin: 0 0 0.2em 0;
-}
-
-.introduction > .introduction__text {
-    margin: 0;
 }
 
 .contactLocation > .contactLocation__location {
     display: inline-block;
 }
 
-.contactLocation > .contactLocation__location > .contactLocation__location__title {
+.contactLocation
+    > .contactLocation__location
+    > .contactLocation__location__title {
     margin: 0 0 0.2em 0;
 }
 
-.contactLocation > .contactLocation__location > .contactLocation__location__text {
+.contactLocation
+    > .contactLocation__location
+    > .contactLocation__location__text {
     margin: 0;
 }
 
-.contactLocation > .contactLocation__picture > .contactLocation__picture__image {
+.contactLocation
+    > .contactLocation__picture
+    > .contactLocation__picture__image {
     display: inline-block;
     vertical-align: top;
     width: 200px;
@@ -50,7 +43,8 @@
     font-weight: bold;
 }
 
-.contactOpeningHours .contactOpeningHours__day, .contactOpeningHours .contactOpeningHours__time {
+.contactOpeningHours .contactOpeningHours__day,
+.contactOpeningHours .contactOpeningHours__time {
     border: 1px solid var(--clr-background-menu);
     padding: 7px;
 }
@@ -80,7 +74,9 @@
         text-align: center;
     }
 
-    .contactPage__contactLocation > .contactLocation__picture > .contactLocation__picture__image {
+    .contactPage__contactLocation
+        > .contactLocation__picture
+        > .contactLocation__picture__image {
         display: block;
         margin: 30px auto;
     }

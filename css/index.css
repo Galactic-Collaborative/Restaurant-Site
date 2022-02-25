@@ -36,7 +36,12 @@ video#backgroundVideo {
 
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(
+        calc(100% - max(40%, 400px)) 0,
+        100% 0,
+        100% 100%,
+        calc(80% - max(40%, 400px)) 100%
+    );
 
     display: flex;
     flex-direction: row;
@@ -62,6 +67,19 @@ video#backgroundVideo {
 .brandHero__header h3 {
     font-size: 2rem;
     margin: -0.5rem 0 0.5rem 0;
+}
+
+@media screen and (max-width: calc(800px)) {
+    .brandHero {
+        clip-path: none;
+    }
+
+    .brandHero__header {
+        text-align: left;
+
+        max-width: 80vw; /* 40vw - 2 * 2vw (padding) */
+        margin-right: 5vw;
+    }
 }
 
 .welcomingMessage {
@@ -97,12 +115,7 @@ video#backgroundVideo {
 }
 
 a.welcomingMessage_link {
-    color: var(--color-primary, red);
-    font-weight: bold;
-}
-
-a.footer_link {
-    color: white;
+    color: var(--clr-primary);
     font-weight: bold;
 }
 

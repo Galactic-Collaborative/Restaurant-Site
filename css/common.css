@@ -7,10 +7,12 @@
     --clr-background-menu: #1a1a1a;
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
+    --clr-primary: rgb(48, 160, 48);
 
     /* Custom lengths */
     --nav-height: 75px;
     --main-width: min(calc(1000px + 10vmax), 100%);
+    --footer-height: 34px;
 }
 
 body,
@@ -194,4 +196,9 @@ article.introduction > p {
     text-align: center;
     color: white;
     font-size: 0.75rem;
+}
+
+.footer__link {
+    color: white;
+    font-weight: bold;
 }

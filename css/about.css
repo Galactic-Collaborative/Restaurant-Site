@@ -89,3 +89,9 @@ body {
 .plotpoint--no-picture {
     min-height: unset;
 }
+
+.plotpoint__link {
+    font-weight: bold;
+    color: darkgreen;
+    text-decoration: none;
+}
