@@ -11,25 +11,28 @@
     </head>
     <body>
         <nav>
-            <h1>American Steakhouse</h1>
-            <a href="/">Home</a>
-            <a href="/menu.html">Menu</a>
-            <div>
-                <button onclick="location.href='/about/index.html'">
-                    About
-                </button>
-                <div class="dropdown">
-                    <a href="#">Kitchen</a>
-                    <a href="#">Chefs</a>
-                    <a href="/about/beer.html" class="active">Biergozers</a>
-                    <a href="#">Location</a>
-                </div>
-            </div>
-            <a href="/contact.html">Contact</a>
+            <!-- We use an unordered list for screenreaders-->
+            <ul>
+                <li><h1>American Steakhouse</h1></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul class="context">
+                        <li><a href="/about/index.html">History</a></li>
+                        <li>
+                            <a href="/about/beer.html" class="active"
+                                >Beverages</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
         </nav>
 
         <main>
-            <article class="beerPageIntroduction">
+            <article class="introduction">
                 <h1>Alcoholic beverages</h1>
                 <p>
                     With your delicious meal you of course want the drink to be
