@@ -1,3 +1,7 @@
+:root {
+    --image-size: clamp(300px, 15vw, 400px);
+}
+
 body {
     margin: 0;
     background-color: transparent;
@@ -5,10 +9,10 @@ body {
 
 main {
     box-sizing: border-box;
-    width: min(1000px, 100vw);
+    width: min(calc(1000px + 10vw), 100vw);
     margin: 0 auto;
     position: relative;
-    padding: 1vw 0;
+    padding: 1vw 5vw;
 }
 
 article.plotpoint:first-child {
@@ -18,7 +22,7 @@ article.plotpoint:first-child {
 article.plotpoint {
     position: relative;
     width: fit-content;
-    min-height: calc(clamp(100px, 15vw, 300px) + 20px);
+    min-height: calc(var(--image-size) + 20px);
 }
 
 article.plotpoint > p {
@@ -37,8 +41,8 @@ article.plotpoint > picture > img {
     z-index: -1;
     top: 20px;
     position: absolute;
-    width: clamp(100px, 15vw, 300px);
-    height: clamp(100px, 15vw, 300px);
+    width: var(--image-size);
+    height: var(--image-size);
     border-radius: 4px;
 }
 
@@ -47,7 +51,7 @@ main > article:not(.plotpoint--important):nth-child(2n + 1) {
 }
 
 main > article:not(.plotpoint--important):nth-child(2n + 1) > picture > img {
-    right: calc(-0.85 * clamp(100px, 15vw, 300px));
+    right: calc(-0.85 * var(--image-size));
 }
 
 main > article:not(.plotpoint--important):nth-child(2n) {
@@ -55,7 +59,7 @@ main > article:not(.plotpoint--important):nth-child(2n) {
 }
 
 main > article:not(.plotpoint--important):nth-child(2n) > picture > img {
-    left: calc(-0.65 * clamp(100px, 15vw, 300px));
+    left: calc(-0.9 * var(--image-size));
 }
 
 article.plotpoint--important > picture {
