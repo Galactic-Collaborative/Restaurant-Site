@@ -44,9 +44,10 @@ table.menuTable td > h3 {
 img.food_picture{
     clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
     height: 60vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     object-fit: cover;
+    overflow: hidden;
 }
 
 
