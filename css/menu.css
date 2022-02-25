@@ -41,40 +41,15 @@ table.menuTable td > h3 {
     margin: 0;
 }
 
-img#steak_picture{
+img.food_picture{
     clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
     height: 60vh;
     width: 100vw;
     position: relative;
+    object-fit: cover;
 }
 
-img#ribs_picture{
-    clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
-    height: 60vh;
-    width: 100vw;
-    position: relative;
-}
 
-img#burger_picture{
-    clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
-    height: 60vh;
-    width: 100vw;
-    position: relative;
-}
-
-img#seafood_picture{
-    clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
-    height: 60vh;
-    width: 100vw;
-    position: relative;
-}
-
-img#sidedish_picture{
-    clip-path: polygon(100% 0, 100% 80%, 0% 100%, 0 20%);
-    height: 60vh;
-    width: 100vw;
-    position: relative;
-}
 
 div.menu_introduction{
 
@@ -87,6 +62,6 @@ div.menu_introduction > p{
     color: white;
 }
 
-div.menu_introduction > h2{
+div.menu_introduction > h1{
     color: white;
 }
