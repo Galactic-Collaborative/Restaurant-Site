@@ -8,8 +8,9 @@
     --clr-nav: #1a1a1a;
     --clr-on-nav: #ffffff;
 
-    /* Custom heights */
+    /* Custom lengths */
     --nav-height: 75px;
+    --main-width: min(calc(1000px + 10vmax), 100%);
 }
 
 body,
@@ -30,14 +31,27 @@ html {
 }
 
 main {
+    max-width: calc(1000px + 10vmax);
+    width: 100%;
+    padding: 1vmax 5vmax;
+    margin: var(--nav-height) auto 0;
     min-height: calc(100vh - var(--nav-height) - var(--footer-height));
     position: relative;
     overflow: hidden;
 }
 
-/* Add margin for main content except on landingPage */
-nav + main:not(.landingPage) {
-    margin-top: var(--nav-height);
+/* Introduction */
+article.introduction {
+    padding: 5vh 0;
+}
+
+article.introduction > h2 {
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+}
+
+article.introduction > p {
+    margin-bottom: 0;
 }
 
 /* Navigation bar */
@@ -64,23 +78,23 @@ nav + main:not(.landingPage) {
 /*  We use flex-order to order the logoname to be in the middle
     Screenreaders will not read this property, 
     so they will read out the logoname first and then the navigation links */
-.primaryNavigation :nth-child(2) {
+.primaryNavigation .primaryNavigation__item:nth-child(2) {
     order: 1;
 }
 
-.primaryNavigation :nth-child(3) {
+.primaryNavigation .primaryNavigation__item:nth-child(3) {
     order: 2;
 }
 
-.primaryNavigation :first-child {
+.primaryNavigation .primaryNavigation__brandName {
     order: 3;
 }
 
-.primaryNavigation :nth-child(4) {
+.primaryNavigation .primaryNavigation__item:nth-child(4) {
     order: 4;
 }
 
-.primaryNavigation :nth-child(5) {
+.primaryNavigation .primaryNavigation__item:nth-child(5) {
     order: 5;
 }
 

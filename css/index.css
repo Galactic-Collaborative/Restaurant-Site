@@ -1,3 +1,10 @@
+/* Add margin for main content except on landingPage */
+.landingPage {
+    max-width: unset;
+    padding: 0;
+    margin-top: 0;
+}
+
 video#backgroundVideo {
     top: 0;
     right: 0;
